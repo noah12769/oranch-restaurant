@@ -3,11 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Réservez votre table chez Ô Ranch, steakhouse à Saint-Claude en Guadeloupe. Disponibilités en temps réel, service du midi et du soir." />
   <title>Réservation — Ô Ranch · Steakhouse Guadeloupe</title>
+  <link rel="canonical" href="https://oranch-restaurant.vercel.app/reservation.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Réservation — Ô Ranch · Steakhouse Guadeloupe" />
+  <meta property="og:description" content="Réservez votre table chez Ô Ranch, steakhouse à Saint-Claude en Guadeloupe." />
+  <meta property="og:url" content="https://oranch-restaurant.vercel.app/reservation.html" />
+  <meta property="og:image" content="https://oranch-restaurant.vercel.app/images/wood-panel.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Réservation — Ô Ranch · Steakhouse Guadeloupe" />
+  <meta name="twitter:description" content="Réservez votre table chez Ô Ranch, steakhouse à Saint-Claude en Guadeloupe." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" /></noscript>
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
     :root {
@@ -26,7 +36,8 @@
 
     .nav-wrap { position:sticky; top:0; z-index:100; padding:0 0 10px 0; pointer-events:none; }
     .nav { display:inline-flex; align-items:center; gap:4px; padding:9px 12px 9px 16px; background:rgba(16,10,6,.82); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border:1px solid rgba(200,185,165,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); pointer-events:all; }
-    .nav__burger { display:flex; flex-direction:column; gap:4.5px; cursor:pointer; padding:4px 6px; border-radius:999px; transition:background .2s; }
+    .nav__burger { display:flex; flex-direction:column; gap:4.5px; cursor:pointer; padding:4px 6px; border-radius:999px; transition:background .2s; border:none; background:none; appearance:none; -webkit-appearance:none; }
+    :focus-visible { outline:2px solid var(--wood); outline-offset:3px; border-radius:4px; }
     .nav__burger:hover { background:rgba(235,224,202,.08); }
     .nav__burger span { display:block; width:18px; height:1.5px; background:var(--cream); }
     .nav__logo { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:19px; letter-spacing:.26em; color:var(--cream); text-transform:uppercase; padding:0 4px 0 6px; text-decoration:none; }
@@ -198,7 +209,7 @@
 
   <div class="nav-wrap">
     <nav class="nav">
-      <div class="nav__burger"><span></span><span></span><span></span></div>
+      <button class="nav__burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <a class="nav__logo" href="index.html">Ô Ranch</a>
       <div class="nav__sep"></div>
       <ul class="nav__links">
@@ -213,7 +224,7 @@
     <div class="page-hero__overlay"></div>
     <div class="page-hero__content">
       <div class="page-hero__eyebrow">Ô Ranch · Saint-Claude, Basse-Terre</div>
-      <div class="page-hero__title">Réservation</div>
+      <h1 class="page-hero__title">Réservation</h1>
     </div>
   </div>
 
@@ -241,10 +252,10 @@
           <div class="hours-pill" style="grid-column:1/-1"><div class="hours-pill__service">Fermé</div><div class="hours-pill__time">Lundi</div></div>
         </div>
       </div>
-      <div class="map-placeholder" onclick="window.open('https://maps.google.com/?q=Route+Armand+D+Ain+Saint-Claude+Guadeloupe')">
+      <a class="map-placeholder" href="https://maps.google.com/?q=Route+Armand+D+Ain+Saint-Claude+Guadeloupe" target="_blank" rel="noopener" aria-label="Voir Ô Ranch sur Google Maps">
         <div class="map-placeholder__icon">◎</div>
         <div class="map-placeholder__text">Voir sur la carte</div>
-      </div>
+      </a>
     </div>
 
     <div class="form-panel">
@@ -252,21 +263,22 @@
       <div class="form-subtitle">Remplissez le formulaire ci-dessous. Nous vous confirmons par téléphone ou email dans les meilleurs délais.</div>
 
       <form id="resy-form" onsubmit="submitForm(event)">
+        <div aria-hidden="true" style="position:absolute;left:-9999px;"><label>Ne pas remplir<input type="text" name="hp_field" tabindex="-1" autocomplete="off" /></label></div>
         <div class="form-row">
-          <div class="field"><label>Prénom</label><input type="text" placeholder="Marie" required /></div>
-          <div class="field"><label>Nom</label><input type="text" placeholder="Dupont" required /></div>
+          <div class="field"><label for="f-prenom">Prénom</label><input type="text" id="f-prenom" placeholder="Marie" required /></div>
+          <div class="field"><label for="f-nom">Nom</label><input type="text" id="f-nom" placeholder="Dupont" required /></div>
         </div>
         <div class="form-row">
-          <div class="field"><label>Email</label><input type="email" id="f-email" placeholder="marie.dupont@email.fr" required /></div>
-          <div class="field"><label>Téléphone</label><input type="tel" placeholder="+590 6 00 00 00 00" /></div>
+          <div class="field"><label for="f-email">Email</label><input type="email" id="f-email" placeholder="marie.dupont@email.fr" required /></div>
+          <div class="field"><label for="f-tel">Téléphone</label><input type="tel" id="f-tel" placeholder="+590 6 00 00 00 00" required /></div>
         </div>
         <div class="form-row three">
           <div class="field">
-            <label>Date</label>
+            <label for="f-date">Date</label>
             <input type="date" id="f-date" required onchange="resetAvail()" />
           </div>
           <div class="field">
-            <label>Service</label>
+            <label for="f-service">Service</label>
             <select id="f-service" onchange="resetAvail()">
               <option value="">— Choisir —</option>
               <optgroup label="Déjeuner (Mar–Ven, Dim)">
@@ -281,7 +293,7 @@
             </select>
           </div>
           <div class="field">
-            <label>Couverts</label>
+            <label for="f-guests">Couverts</label>
             <select id="f-guests" onchange="resetAvail()">
               <option value="">—</option>
               <option value="1">1 personne</option><option value="2">2 personnes</option>
@@ -293,8 +305,8 @@
         </div>
         <div class="form-row single">
           <div class="field">
-            <label>Occasion (optionnel)</label>
-            <select>
+            <label for="f-occasion">Occasion (optionnel)</label>
+            <select id="f-occasion">
               <option value="">— Aucune occasion particulière —</option>
               <option>Anniversaire</option><option>Anniversaire de mariage</option>
               <option>Repas d'affaires</option><option>Demande en mariage</option>
@@ -304,8 +316,8 @@
         </div>
         <div class="form-row single">
           <div class="field">
-            <label>Allergies / demandes particulières</label>
-            <textarea placeholder="Allergie aux crustacés, sans gluten, table en terrasse…"></textarea>
+            <label for="f-notes">Allergies / demandes particulières</label>
+            <textarea id="f-notes" placeholder="Allergie aux crustacés, sans gluten, table en terrasse…"></textarea>
           </div>
         </div>
 
@@ -334,6 +346,7 @@
         <ul class="footer__links">
           <li><a href="index.html">Accueil</a></li><li><a href="menu.html">La carte</a></li>
           <li><a href="about.html">À propos</a></li><li><a href="reservation.html">Réservation</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
       <div>
@@ -421,8 +434,8 @@
   <script>
   (function(){
     var burger=document.querySelector('.nav__burger'),overlay=document.getElementById('navOverlay');
-    function open(){burger.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden';}
-    function close(){burger.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';}
+    function open(){burger.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden';burger.setAttribute('aria-expanded','true');}
+    function close(){burger.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';burger.setAttribute('aria-expanded','false');}
     burger.addEventListener('click',function(){overlay.classList.contains('open')?close():open();});
     document.querySelector('.nav-overlay__close').addEventListener('click',close);
     overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
