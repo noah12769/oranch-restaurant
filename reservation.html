@@ -66,10 +66,8 @@
     .hours-pill__service { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--wood); margin-bottom:4px; }
     .hours-pill__time { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--cream); }
 
-    .map-placeholder { border-radius:12px; height:140px; background:rgba(0,0,0,.28); border:1px solid rgba(200,185,165,.25); box-shadow:0 1px 6px rgba(0,0,0,.35); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; cursor:pointer; transition:background .2s; }
-    .map-placeholder:hover { background:rgba(0,0,0,.38); }
-    .map-placeholder__icon { font-size:20px; color:var(--wood); opacity:1; }
-    .map-placeholder__text { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream2); }
+    .map-embed { border-radius:12px; height:180px; overflow:hidden; border:1px solid rgba(200,185,165,.25); box-shadow:0 1px 6px rgba(0,0,0,.35); display:block; }
+    .map-embed iframe { width:100%; height:100%; border:0; display:block; filter:grayscale(.4) sepia(.15) brightness(.85); }
 
     .form-panel { border-radius:var(--r); background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.08); padding:40px 44px; }
     .form-title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:32px; color:var(--cream); margin-bottom:6px; }
@@ -252,10 +250,15 @@
           <div class="hours-pill" style="grid-column:1/-1"><div class="hours-pill__service">Fermé</div><div class="hours-pill__time">Lundi</div></div>
         </div>
       </div>
-      <a class="map-placeholder" href="https://maps.google.com/?q=Route+Armand+D+Ain+Saint-Claude+Guadeloupe" target="_blank" rel="noopener" aria-label="Voir Ô Ranch sur Google Maps">
-        <div class="map-placeholder__icon">◎</div>
-        <div class="map-placeholder__text">Voir sur la carte</div>
-      </a>
+      <div class="map-embed">
+        <iframe
+          src="https://maps.google.com/maps?q=O+Ranch+Saint-Claude+Guadeloupe&output=embed&z=15"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation Ô Ranch">
+        </iframe>
+      </div>
     </div>
 
     <div class="form-panel">

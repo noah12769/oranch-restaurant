@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Politique de confidentialité du site Ô Ranch, steakhouse à Saint-Claude en Guadeloupe." />
+  <title>Confidentialité — Ô Ranch · Steakhouse Guadeloupe</title>
+  <link rel="canonical" href="https://oranch-restaurant.vercel.app/confidentialite.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" /></noscript>
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root {
+      --ink:    #16100A;
+      --cream:  #F5EDE0;
+      --cream2: #DCC89A;
+      --stone:  #726860;
+      --wood:   #D4942A;
+      --r: 18px;
+    }
+    html { background:var(--ink); }
+    body { background:var(--ink); padding:10px; min-height:100vh; font-family:'Jost',sans-serif; }
+
+    .nav-wrap { position:sticky; top:0; z-index:100; padding:0 0 10px 0; pointer-events:none; }
+    .nav { display:inline-flex; align-items:center; gap:4px; padding:9px 12px 9px 16px; background:rgba(16,10,6,.82); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border:1px solid rgba(200,185,165,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); pointer-events:all; }
+    .nav__burger { display:flex; flex-direction:column; gap:4.5px; cursor:pointer; padding:4px 6px; border-radius:999px; transition:background .2s; border:none; background:none; appearance:none; -webkit-appearance:none; }
+    .nav__burger:hover { background:rgba(235,224,202,.08); }
+    .nav__burger span { display:block; width:18px; height:1.5px; background:var(--cream); }
+    .nav__logo { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:20px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream); text-decoration:none; padding:0 10px; }
+    .nav__sep { width:1px; height:16px; background:rgba(200,185,165,.15); margin:0 4px; }
+    .nav__links { display:flex; list-style:none; gap:2px; }
+    .nav__links a { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--cream2); text-decoration:none; padding:6px 10px; border-radius:999px; transition:background .2s, color .2s; }
+    .nav__links a:hover, .nav__links a.active { color:var(--cream); background:rgba(235,224,202,.07); }
+
+    .content {
+      max-width:780px;
+      margin:0 auto;
+      padding:48px 24px 64px;
+      background:
+        linear-gradient(rgba(10,6,2,.52), rgba(10,6,2,.52)),
+        url('images/wood-panel.jpg') center / cover;
+      border-radius:var(--r);
+    }
+
+    .content__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.35em; text-transform:uppercase; color:var(--wood); margin-bottom:16px; }
+    h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,56px); color:var(--cream); line-height:1.1; margin-bottom:40px; }
+    h2 { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px; color:var(--cream); margin:36px 0 12px; }
+    p, li { font-family:'Jost',sans-serif; font-weight:300; font-size:14px; line-height:1.8; color:var(--cream2); margin-bottom:12px; }
+    a { color:var(--wood); text-decoration:none; }
+    a:hover { color:var(--cream); }
+    ul { padding-left:20px; }
+    .divider { height:1px; background:rgba(200,185,165,.1); margin:32px 0; }
+
+    .footer { margin-top:10px; border-radius:var(--r); background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.07); padding:36px 44px 28px; }
+    .footer__top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; margin-bottom:28px; }
+    .footer__logo { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:28px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream); margin-bottom:8px; }
+    .footer__tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--wood); }
+    .footer__col-title { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--wood); margin-bottom:14px; }
+    .footer__links { list-style:none; display:flex; flex-direction:column; gap:8px; }
+    .footer__links a { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--cream2); text-decoration:none; transition:color .2s; }
+    .footer__links a:hover { color:var(--cream); }
+    .footer__info p { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.8; }
+    .footer__info a { color:var(--cream2); text-decoration:none; }
+    .footer__info a:hover { color:var(--cream); }
+    .footer__bottom { border-top:1px solid rgba(200,185,165,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; }
+    .footer__copy { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.12em; color:rgba(168,148,120,.35); }
+    .footer__social { display:flex; gap:16px; }
+    .footer__social a { color:rgba(235,224,202,.35); transition:color .2s; }
+    .footer__social a:hover { color:var(--cream); }
+    .footer__social svg { width:14px; height:14px; fill:currentColor; }
+
+    :focus-visible { outline:2px solid var(--wood); outline-offset:3px; border-radius:4px; }
+
+    .nav__burger span { transition: transform .35s cubic-bezier(.16,1,.3,1), opacity .25s; }
+    .nav__burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
+    .nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
+    .nav-overlay { position:fixed; inset:0; z-index:200; background:rgba(10,6,2,.96); backdrop-filter:blur(20px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:32px; opacity:0; pointer-events:none; transition:opacity .35s; }
+    .nav-overlay.open { opacity:1; pointer-events:all; }
+    .nav-overlay__close { position:absolute; top:24px; right:24px; width:40px; height:40px; background:rgba(235,224,202,.07); border:1px solid rgba(200,185,165,.1); border-radius:999px; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+    .nav-overlay__close span { display:block; width:16px; height:1.5px; background:var(--cream); position:absolute; }
+    .nav-overlay__close span:nth-child(1) { transform:rotate(45deg); }
+    .nav-overlay__close span:nth-child(2) { transform:rotate(-45deg); }
+    .nav-overlay__links { display:flex; flex-direction:column; align-items:center; gap:28px; }
+    .nav-overlay__links a { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,6vw,48px); letter-spacing:.12em; text-transform:uppercase; color:var(--cream2); text-decoration:none; transition:color .3s; }
+    .nav-overlay__links a:hover, .nav-overlay__links a.active { color:var(--cream); }
+
+    @media(max-width:640px) {
+      .footer__top { grid-template-columns:1fr; gap:24px; }
+      .footer { padding:28px 24px 20px; }
+      .content { padding:32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <nav class="nav">
+      <button class="nav__burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="nav__logo" href="index.html">Ô Ranch</a>
+      <div class="nav__sep"></div>
+      <ul class="nav__links">
+        <li><a href="menu.html">La Carte</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="reservation.html">Réserver</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="content">
+    <div class="content__eyebrow">RGPD · Données personnelles</div>
+    <h1>Politique de<br>Confidentialité</h1>
+
+    <h2>Responsable du traitement</h2>
+    <p><strong style="color:var(--cream)">Ô Ranch</strong><br>
+    Route Armand D'ain — 97120 Saint-Claude, Guadeloupe<br>
+    Téléphone : <a href="tel:+590690370208">+590 690 37-02-08</a></p>
+
+    <div class="divider"></div>
+
+    <h2>Données collectées</h2>
+    <p>Dans le cadre de votre demande de réservation, nous collectons les données suivantes :</p>
+    <ul>
+      <li>Prénom et nom</li>
+      <li>Adresse email</li>
+      <li>Numéro de téléphone</li>
+      <li>Date, heure et nombre de couverts souhaités</li>
+      <li>Informations complémentaires transmises librement (allergies, occasion particulière)</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Finalité du traitement</h2>
+    <p>Les données collectées sont utilisées exclusivement pour :</p>
+    <ul>
+      <li>La gestion et la confirmation de votre réservation</li>
+      <li>Vous contacter en cas de modification ou d'annulation</li>
+    </ul>
+    <p>Vos données ne font l'objet d'aucune cession, vente ou location à des tiers.</p>
+
+    <div class="divider"></div>
+
+    <h2>Durée de conservation</h2>
+    <p>Les données relatives aux réservations sont conservées pendant une durée maximale de 12 mois à compter de la date de réservation, puis supprimées.</p>
+
+    <div class="divider"></div>
+
+    <h2>Vos droits</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679), vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong style="color:var(--cream)">Droit d'accès</strong> : obtenir une copie de vos données</li>
+      <li><strong style="color:var(--cream)">Droit de rectification</strong> : corriger des données inexactes</li>
+      <li><strong style="color:var(--cream)">Droit à l'effacement</strong> : demander la suppression de vos données</li>
+      <li><strong style="color:var(--cream)">Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous directement par téléphone au <a href="tel:+590690370208">+590 690 37-02-08</a> ou en vous présentant au restaurant.</p>
+
+    <div class="divider"></div>
+
+    <h2>Cookies et stockage local</h2>
+    <p>Ce site n'utilise pas de cookies publicitaires, de traceurs ou d'outils d'analyse tiers. Une préférence d'affichage peut être enregistrée dans le localStorage de votre navigateur. Cette donnée reste strictement locale et n'est jamais transmise à un serveur.</p>
+
+    <div class="divider"></div>
+
+    <h2>Réclamation</h2>
+    <p>Si vous estimez que le traitement de vos données n'est pas conforme à la réglementation, vous pouvez introduire une réclamation auprès de la <strong style="color:var(--cream)">CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Mise à jour</h2>
+    <p>Cette politique de confidentialité peut être mise à jour à tout moment. La date de dernière modification est indiquée ci-dessous.</p>
+    <p style="font-size:11px; opacity:.5">Dernière mise à jour : juin 2026</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div><div class="footer__logo">Ô Ranch</div><div class="footer__tagline">La passion de la viande · Guadeloupe</div></div>
+      <div>
+        <div class="footer__col-title">Navigation</div>
+        <ul class="footer__links">
+          <li><a href="index.html">Accueil</a></li><li><a href="menu.html">La carte</a></li>
+          <li><a href="about.html">À propos</a></li><li><a href="reservation.html">Réservation</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Nous trouver</div>
+        <div class="footer__info">
+          <p>Route Armand D'ain<br>Saint-Claude 97120 · Guadeloupe</p>
+          <p style="margin-top:10px"><a href="tel:+590690370208">+590 690 37-02-08</a></p>
+          <p><a href="tel:+590590815564">0590 81 55 64</a></p>
+          <p style="margin-top:10px; font-size:11px; opacity:.6">Mar–Ven · 12h–14h30 · 19h–22h<br>Sam · 18h45–22h · Dim · 12h–14h30</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copy">© 2026 Ô Ranch · Steakhouse · Saint-Claude, Guadeloupe</div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/o_ranch_gp/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
+    <nav class="nav-overlay__links">
+      <a href="index.html">Accueil</a><a href="menu.html">La Carte</a>
+      <a href="reservation.html">Réservation</a><a href="about.html">Notre Restaurant</a>
+    </nav>
+  </div>
+
+  <script>
+  (function(){
+    var burger=document.querySelector('.nav__burger'),overlay=document.getElementById('navOverlay');
+    function open(){burger.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden';burger.setAttribute('aria-expanded','true');}
+    function close(){burger.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';burger.setAttribute('aria-expanded','false');}
+    burger.addEventListener('click',function(){overlay.classList.contains('open')?close():open();});
+    document.querySelector('.nav-overlay__close').addEventListener('click',close);
+    overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  })();
+  </script>
+</body>
+</html>
