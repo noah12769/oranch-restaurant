@@ -4,144 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Menu — ARDOISE</title>
+  <title>La Carte — Ô Ranch · Steakhouse Guadeloupe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    :root { --ink:#0a0b0c; --cream:#f0ebe0; --cream2:#c8bfad; --gold:#b8a98a; --r:18px; }
+    :root {
+      --ink:    #16100A;
+      --cream:  #F5EDE0;
+      --cream2: #DCC89A;
+      --stone:  #726860;
+      --wood:   #D4942A;
+      --ember:  #C04018;
+      --green:  #3d6b35;
+      --r: 18px;
+    }
 
     html { background:var(--ink); }
     body { background:var(--ink); padding:10px; min-height:100vh; font-family:'Jost',sans-serif; }
 
-    /* ── NAV PILL ─────────────────────────────────────────────── */
     .nav-wrap { position:sticky; top:0; z-index:100; padding:0 0 10px 0; pointer-events:none; }
-    .nav {
-      display:inline-flex; align-items:center; gap:4px;
-      padding:9px 12px 9px 16px;
-      background:rgba(8,7,6,.72); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
-      border:1px solid rgba(240,235,224,.1); border-radius:999px;
-      box-shadow:0 4px 24px rgba(0,0,0,.5);
-      pointer-events:all;
-    }
+    .nav { display:inline-flex; align-items:center; gap:4px; padding:9px 12px 9px 16px; background:rgba(16,10,6,.82); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border:1px solid rgba(200,185,165,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); pointer-events:all; }
     .nav__burger { display:flex; flex-direction:column; gap:4.5px; cursor:pointer; padding:4px 6px; border-radius:999px; transition:background .2s; }
-    .nav__burger:hover { background:rgba(240,235,224,.08); }
+    .nav__burger:hover { background:rgba(235,224,202,.08); }
     .nav__burger span { display:block; width:18px; height:1.5px; background:var(--cream); }
     .nav__logo { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:19px; letter-spacing:.26em; color:var(--cream); text-transform:uppercase; padding:0 4px 0 6px; text-decoration:none; }
-    .nav__sep { width:1px; height:15px; background:rgba(240,235,224,.14); margin:0 6px; flex-shrink:0; }
+    .nav__sep { width:1px; height:15px; background:rgba(200,185,165,.14); margin:0 6px; flex-shrink:0; }
     .nav__links { display:flex; align-items:center; gap:2px; list-style:none; }
-    .nav__links a { display:block; font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,235,224,.58); text-decoration:none; padding:7px 13px; border-radius:999px; transition:background .2s, color .2s; white-space:nowrap; }
-    .nav__links a:hover { color:var(--cream); background:rgba(240,235,224,.1); }
-    .nav__links a.active { color:var(--cream); background:rgba(240,235,224,.14); }
+    .nav__links a { display:block; font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(235,224,202,.58); text-decoration:none; padding:7px 13px; border-radius:999px; transition:background .2s, color .2s; white-space:nowrap; }
+    .nav__links a:hover { color:var(--cream); background:rgba(235,224,202,.1); }
+    .nav__links a.active { color:var(--cream); background:rgba(235,224,202,.14); }
 
-    /* ── HERO HEADER ──────────────────────────────────────────── */
-    .page-hero {
-      position:relative; border-radius:var(--r); overflow:hidden;
-      height:280px; margin-bottom:10px;
-      background-image:url('https://images.pexels.com/photos/5865244/pexels-photo-5865244.jpeg?auto=compress&cs=tinysrgb&w=1920');
-      background-size:cover; background-position:center 45%;
-    }
-    .page-hero__overlay {
-      position:absolute; inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.4) 60%, rgba(0,0,0,.2) 100%);
-    }
+    .page-hero { position:relative; border-radius:var(--r); overflow:hidden; height:280px; margin-bottom:10px; background-image:url('images/l-incontournable-tomahawk6.jpg'); background-size:cover; background-position:center 40%; }
+    .page-hero__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(22,16,10,.90) 0%, rgba(22,16,10,.4) 60%, rgba(22,16,10,.2) 100%); }
     .page-hero__content { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:36px 44px; }
-    .page-hero__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+    .page-hero__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--wood); margin-bottom:10px; }
     .page-hero__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(52px,6vw,80px); letter-spacing:-.01em; text-transform:uppercase; color:var(--cream); line-height:.9; }
 
-    /* ── MENU TABS ────────────────────────────────────────────── */
     .menu-tabs { display:flex; gap:10px; margin-bottom:10px; }
-    .menu-tab {
-      flex:1; padding:20px 24px; border-radius:var(--r); cursor:pointer;
-      background:rgba(255,255,255,.03); border:1px solid rgba(240,235,224,.07);
-      transition:background .2s, border-color .2s;
-      text-align:left;
-    }
-    .menu-tab:hover, .menu-tab.active { background:rgba(255,255,255,.06); border-color:rgba(240,235,224,.15); }
+    .menu-tab { flex:1; padding:20px 24px; border-radius:var(--r); cursor:pointer; background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.08); transition:background .2s, border-color .2s; text-align:left; }
+    .menu-tab:hover, .menu-tab.active { background:rgba(10,6,2,.60); border-color:rgba(200,185,165,.22); }
     .menu-tab__name { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px; color:var(--cream); letter-spacing:.04em; margin-bottom:4px; }
     .menu-tab__sub { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream2); }
-    .menu-tab__price { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--gold); margin-top:8px; }
+    .menu-tab__price { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:var(--wood); margin-top:8px; }
 
-    /* ── MENU CARD (the "image" of the menu) ──────────────────── */
     .menu-display { display:none; }
     .menu-display.active { display:block; }
 
-    .menu-card {
-      border-radius:var(--r);
-      background:rgba(255,255,255,.025);
-      border:1px solid rgba(240,235,224,.07);
-      overflow:hidden;
-    }
-
-    .menu-card__header {
-      padding:44px 56px 36px;
-      border-bottom:1px solid rgba(240,235,224,.07);
-      display:flex; justify-content:space-between; align-items:flex-end;
-      background:rgba(255,255,255,.02);
-    }
-    .menu-card__restaurant { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); }
+    .menu-card { border-radius:var(--r); background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.08); overflow:hidden; }
+    .menu-card__header { padding:44px 56px 36px; border-bottom:1px solid rgba(200,185,165,.07); display:flex; justify-content:space-between; align-items:flex-end; background:rgba(10,6,2,.40); }
+    .menu-card__restaurant { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:var(--wood); }
     .menu-card__title { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:32px; color:var(--cream); margin-top:6px; }
     .menu-card__services { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--cream2); text-align:right; }
-    .menu-card__price-main { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:28px; color:var(--gold); text-align:right; margin-top:4px; }
-
+    .menu-card__price-main { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:26px; color:var(--wood); text-align:right; margin-top:4px; }
     .menu-card__body { padding:0 56px; }
 
-    .course {
-      display:grid; grid-template-columns:1fr auto;
-      gap:12px 24px; align-items:baseline;
-      padding:26px 0;
-      border-bottom:1px solid rgba(240,235,224,.05);
-    }
+    .course { display:grid; grid-template-columns:1fr auto; gap:12px 24px; align-items:baseline; padding:26px 0; border-bottom:1px solid rgba(200,185,165,.05); }
     .course:last-child { border-bottom:none; }
-    .course__num { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); opacity:.7; grid-column:1; }
-    .course__dot { grid-column:2; display:none; }
+    .course__num { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--wood); opacity:.7; grid-column:1; }
     .course__name { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:18px; color:var(--cream); letter-spacing:.02em; grid-column:1; }
     .course__desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:14px; color:var(--cream2); line-height:1.5; margin-top:3px; grid-column:1; }
-    .course__tag { grid-column:2; grid-row:2/4; font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:rgba(200,191,173,.4); align-self:center; white-space:nowrap; }
+    .course__tag { grid-column:2; grid-row:2/4; font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:rgba(168,148,120,.4); align-self:center; white-space:nowrap; }
 
-    .menu-card__footer {
-      padding:28px 56px 36px;
-      border-top:1px solid rgba(240,235,224,.07);
-      display:flex; justify-content:space-between; align-items:center;
-      background:rgba(255,255,255,.02);
-    }
+    .menu-card__footer { padding:28px 56px 36px; border-top:1px solid rgba(200,185,165,.07); display:flex; justify-content:space-between; align-items:center; background:rgba(10,6,2,.40); }
     .menu-card__accord { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream2); }
-    .menu-card__accord span { color:var(--gold); }
-    .menu-card__note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:12px; color:rgba(200,191,173,.5); max-width:340px; text-align:right; line-height:1.6; }
+    .menu-card__accord span { color:var(--wood); }
+    .menu-card__note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:12px; color:rgba(168,148,120,.5); max-width:360px; text-align:right; line-height:1.6; }
 
-    /* ── FOOTER ───────────────────────────────────────────────── */
-    .footer {
-      margin-top:10px; border-radius:var(--r);
-      background:rgba(15,12,10,.7); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
-      border:1px solid rgba(240,235,224,.07);
-      padding:36px 44px 28px;
-    }
+    .footer { margin-top:10px; border-radius:var(--r); background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.07); padding:36px 44px 28px; }
     .footer__top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; margin-bottom:28px; }
     .footer__logo { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:28px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream); margin-bottom:8px; }
-    .footer__tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--gold); }
-    .footer__col-title { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .footer__tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--wood); }
+    .footer__col-title { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--wood); margin-bottom:14px; }
     .footer__links { list-style:none; display:flex; flex-direction:column; gap:8px; }
     .footer__links a { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--cream2); text-decoration:none; transition:color .2s; }
     .footer__links a:hover { color:var(--cream); }
     .footer__info p { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.8; }
     .footer__info a { color:var(--cream2); text-decoration:none; }
     .footer__info a:hover { color:var(--cream); }
-    .footer__bottom { border-top:1px solid rgba(240,235,224,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; }
-    .footer__copy { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.12em; color:rgba(200,191,173,.35); }
+    .footer__bottom { border-top:1px solid rgba(200,185,165,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; }
+    .footer__copy { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.12em; color:rgba(168,148,120,.35); }
     .footer__social { display:flex; gap:16px; }
-    .footer__social a { color:rgba(240,235,224,.35); transition:color .2s; }
+    .footer__social a { color:rgba(235,224,202,.35); transition:color .2s; }
     .footer__social a:hover { color:var(--cream); }
     .footer__social svg { width:14px; height:14px; fill:currentColor; }
 
-    /* ── RESPONSIVE ───────────────────────────────────────────── */
     @media (max-width: 900px) {
       .menu-tabs { gap: 8px; }
       .menu-card__header { padding: 32px 36px 24px; }
       .menu-card__body { padding: 0 36px; }
       .menu-card__footer { padding: 20px 36px 28px; }
     }
-
     @media (max-width: 700px) {
       body { padding: 8px; }
       .nav { padding: 8px 10px 8px 12px; }
@@ -162,7 +116,6 @@
       .footer__top { grid-template-columns: 1fr; gap: 24px; }
       .footer { padding: 28px 24px 20px; }
     }
-
     @media (max-width: 480px) {
       .nav { padding: 7px 9px 7px 12px; gap: 2px; }
       .nav__logo { font-size: 13px; letter-spacing: .15em; }
@@ -170,336 +123,207 @@
       .nav__links a { font-size: 8px; letter-spacing: .09em; padding: 5px 6px; }
     }
 
-    /* ── BURGER → CROIX ──────────────────────────────────── */
     .nav__burger span { transition: transform .35s cubic-bezier(.16,1,.3,1), opacity .25s; }
     .nav__burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
     .nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
-
-    /* ── OVERLAY NAVIGATION ──────────────────────────────── */
-    .nav-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      background: rgba(10,11,12,.96);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none;
-      transition: opacity .4s cubic-bezier(.16,1,.3,1);
-    }
+    .nav-overlay { position: fixed; inset: 0; z-index: 9999; background: rgba(22,16,10,.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .4s cubic-bezier(.16,1,.3,1); }
     .nav-overlay.open { opacity: 1; pointer-events: all; }
-    .nav-overlay__close {
-      position: absolute; top: 20px; left: 20px;
-      width: 44px; height: 40px;
-      background: rgba(8,7,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border: 1px solid rgba(240,235,224,.1); border-radius: 999px;
-      box-shadow: 0 4px 24px rgba(0,0,0,.5);
-      cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;
-    }
+    .nav-overlay__close { position: absolute; top: 20px; left: 20px; width: 44px; height: 40px; background: rgba(16,10,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border: 1px solid rgba(200,185,165,.1); border-radius: 999px; box-shadow: 0 4px 24px rgba(0,0,0,.5); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
     .nav-overlay__close span { position: absolute; display: block; width: 18px; height: 1.5px; background: var(--cream); }
     .nav-overlay__close span:nth-child(1) { transform: rotate(45deg); }
     .nav-overlay__close span:nth-child(2) { transform: rotate(-45deg); }
     .nav-overlay__links { display: flex; flex-direction: column; align-items: center; gap: 28px; width: 100%; padding: 0 20px; }
-    .nav-overlay__links a {
-      font-family: 'Cormorant Garamond', serif; font-weight: 300;
-      font-size: clamp(28px, 8vw, 50px);
-      letter-spacing: .05em; text-transform: uppercase;
-      color: var(--cream); text-decoration: none;
-      opacity: .45; transition: opacity .25s, letter-spacing .35s;
-      display: block; text-align: center; width: 100%;
-    }
+    .nav-overlay__links a { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(28px, 8vw, 50px); letter-spacing: .05em; text-transform: uppercase; color: var(--cream); text-decoration: none; opacity: .45; transition: opacity .25s, letter-spacing .35s; display: block; text-align: center; width: 100%; }
     .nav-overlay__links a.active { opacity: .9; }
     .nav-overlay__links a:hover { opacity: 1; letter-spacing: .08em; }
+
+    /* ── BOIS SUR LES CASES ─────────────────────────────── */
+    #wood-bg { display:none; }
+    .menu-tab, .menu-card {
+      background:
+        linear-gradient(rgba(10,6,2,.52), rgba(10,6,2,.52)),
+        url('images/wood-panel.jpg') center / cover !important;
+    }
+    .menu-tab:hover, .menu-tab.active {
+      background:
+        linear-gradient(rgba(10,6,2,.38), rgba(10,6,2,.38)),
+        url('images/wood-panel.jpg') center / cover !important;
+    }
+    .menu-card__header, .menu-card__footer { background:rgba(10,6,2,.30) !important; }
+
+    /* ── CORDE SÉPARATRICE ──────────────────────────────────── */
+    .rope-sep { display:none; }
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
+  <div id="wood-bg" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <filter id="wf" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence type="fractalNoise" baseFrequency="0.006 0.15" numOctaves="6" seed="42"/>
+          <feColorMatrix type="matrix" values="0.29 0 0 0 0.51  0.25 0 0 0 0.40  0.14 0 0 0 0.24  0 0 0 0 1"/>
+        </filter>
+      </defs>
+      <rect width="100%" height="100%" filter="url(#wf)"/>
+    </svg>
+  </div>
   <div class="nav-wrap">
     <nav class="nav">
       <div class="nav__burger"><span></span><span></span><span></span></div>
-      <a class="nav__logo" href="index.html">Ardoise</a>
+      <a class="nav__logo" href="index.html">Ô Ranch</a>
       <div class="nav__sep"></div>
       <ul class="nav__links">
-        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="menu.html" class="active">La Carte</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="reservation.html">Réserver</a></li>
       </ul>
     </nav>
   </div>
 
-  <!-- HERO -->
   <div class="page-hero">
     <div class="page-hero__overlay"></div>
     <div class="page-hero__content">
-      <div class="page-hero__eyebrow">Ardoise · Paris VI</div>
-      <div class="page-hero__title">Nos Menus</div>
+      <div class="page-hero__eyebrow">Ô Ranch · Saint-Claude, Basse-Terre</div>
+      <div class="page-hero__title">La Carte</div>
     </div>
   </div>
 
-  <!-- MENU TABS -->
+  <div class="rope-sep" aria-hidden="true"><span class="rope-line"></span></div>
+
   <div class="menu-tabs">
-    <button class="menu-tab active" onclick="switchMenu('degustation',this)">
-      <div class="menu-tab__name">Dégustation</div>
-      <div class="menu-tab__sub">9 services</div>
-      <div class="menu-tab__price">185 €</div>
+    <button class="menu-tab active" onclick="switchMenu('viandes',this)">
+      <div class="menu-tab__name">Viandes</div>
+      <div class="menu-tab__sub">Grillades & Black Angus</div>
+      <div class="menu-tab__price">Spécialité maison</div>
     </button>
-    <button class="menu-tab" onclick="switchMenu('blanche',this)">
-      <div class="menu-tab__name">Carte Blanche</div>
-      <div class="menu-tab__sub">12 services · Surprise du Chef</div>
-      <div class="menu-tab__price">225 €</div>
+    <button class="menu-tab" onclick="switchMenu('mer',this)">
+      <div class="menu-tab__name">Mer & Saveurs</div>
+      <div class="menu-tab__sub">Poissons & Suggestions</div>
+      <div class="menu-tab__price">Pêche du jour</div>
     </button>
-    <button class="menu-tab" onclick="switchMenu('vegetal',this)">
-      <div class="menu-tab__name">Végétal</div>
-      <div class="menu-tab__sub">7 services</div>
-      <div class="menu-tab__price">155 €</div>
+    <button class="menu-tab" onclick="switchMenu('desserts',this)">
+      <div class="menu-tab__name">Douceurs</div>
+      <div class="menu-tab__sub">Desserts maison</div>
+      <div class="menu-tab__price">Faits sur place</div>
     </button>
   </div>
 
-  <!-- MENU DÉGUSTATION -->
-  <div class="menu-display active" id="menu-degustation">
+  <div class="menu-display active" id="menu-viandes">
     <div class="menu-card">
       <div class="menu-card__header">
-        <div>
-          <div class="menu-card__restaurant">Ardoise · ★★★</div>
-          <div class="menu-card__title">Menu Dégustation</div>
-        </div>
-        <div>
-          <div class="menu-card__services">9 services</div>
-          <div class="menu-card__price-main">185 €</div>
-        </div>
+        <div><div class="menu-card__restaurant">Ô Ranch · Basse-Terre</div><div class="menu-card__title">Viandes & Grillades</div></div>
+        <div><div class="menu-card__services">Braise au charbon de bois</div><div class="menu-card__price-main">Black Angus · Tomahawk</div></div>
       </div>
       <div class="menu-card__body">
-        <div class="course">
-          <div class="course__num">I</div>
-          <div class="course__name">Amuse-bouche</div>
-          <div class="course__desc">Tuile au parmesan vieilli 36 mois, mousse de cèpe sauvage des Vosges, huile de truffe blanche</div>
-          <div class="course__tag">Maison</div>
-        </div>
-        <div class="course">
-          <div class="course__num">II</div>
-          <div class="course__name">Langoustines de Bretagne</div>
-          <div class="course__desc">En gelée d'agrumes et coriandre, caviar Osciètre de Gironde, crème légère de cerfeuil sauvage</div>
-          <div class="course__tag">Bretagne</div>
-        </div>
-        <div class="course">
-          <div class="course__num">III</div>
-          <div class="course__name">Foie Gras de Canard</div>
-          <div class="course__desc">Poché au vin de Sauternes, truffe noire du Périgord en fine lamelle, brioche feuilletée au beurre de Bordier</div>
-          <div class="course__tag">Périgord</div>
-        </div>
-        <div class="course">
-          <div class="course__num">IV</div>
-          <div class="course__name">Turbot Sauvage de Ligne</div>
-          <div class="course__desc">Cuit sur peau, beurre blanc au verjus de Noilly Prat, artichaut violet confit à l'huile d'olive, poudre de câpres</div>
-          <div class="course__tag">Atlantique</div>
-        </div>
-        <div class="course">
-          <div class="course__num">V</div>
-          <div class="course__name">Interlude Glacé</div>
-          <div class="course__desc">Granité de champagne brut millésimé, verveine cristallisée, zeste de bergamote</div>
-          <div class="course__tag">Palais</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VI</div>
-          <div class="course__name">Pigeonneau de Bresse</div>
-          <div class="course__desc">En croûte d'herbes des jardins, jus réduit à la Périgueux, pommes soufflées, girolles poêlées au thym</div>
-          <div class="course__tag">Bresse AOP</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VII</div>
-          <div class="course__name">Sélection de Fromages</div>
-          <div class="course__desc">Affinés par Maître Xavier Dupont, compotée de figues de Solliès, pain aux noix et raisins de Corinthe</div>
-          <div class="course__tag">Affinés</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VIII</div>
-          <div class="course__name">Pré-Dessert</div>
-          <div class="course__desc">Sorbet yuzu du Japon, fleurs de sureau en gelée légère, huile d'olive d'exception</div>
-          <div class="course__tag">Fraîcheur</div>
-        </div>
-        <div class="course">
-          <div class="course__num">IX</div>
-          <div class="course__name">Valrhona Grand Cru 75%</div>
-          <div class="course__desc">Caramel fleur de sel de Guérande, glace à la fève de tonka, éclats de pralin artisanal, feuille d'or</div>
-          <div class="course__tag">Dessert</div>
-        </div>
+        <div class="course"><div class="course__num">I</div><div class="course__name">L'Incontournable Tomahawk</div><div class="course__desc">Côte de bœuf longue os, maturée et saisie à la braise, légumes grillés, deux sauces maison, service sur planche bois</div><div class="course__tag">Signature</div></div>
+        <div class="course"><div class="course__num">II</div><div class="course__name">Entrecôte Black Angus</div><div class="course__desc">Pièce maturée saisie à la braise, beurre maître d'hôtel aux herbes fraîches, frites croustillantes maison</div><div class="course__tag">Black Angus</div></div>
+        <div class="course"><div class="course__num">III</div><div class="course__name">Tournedos de Bœuf Rossini</div><div class="course__desc">Médaillon de filet de bœuf, escalope de foie gras poêlé, sauce aux champignons et porto, pommes dorées</div><div class="course__tag">Rossini</div></div>
+        <div class="course"><div class="course__num">IV</div><div class="course__name">Brochettes de Bœuf Marinées</div><div class="course__desc">Brochettes marinées aux épices douces créoles, légumes grillés, riz créole, sauce barbecue maison</div><div class="course__tag">Créole</div></div>
+        <div class="course"><div class="course__num">V</div><div class="course__name">Ribs BBQ Maison</div><div class="course__desc">Travers de porc laqués longuement au four, sauce barbecue fumée maison, frites ou salade fraîche</div><div class="course__tag">BBQ</div></div>
+        <div class="course"><div class="course__num">VI</div><div class="course__name">Côte de Bœuf à Partager</div><div class="course__desc">Pour 2 personnes, viande de race sélectionnée, sauce au choix, gratin de pommes de terre, salade verte</div><div class="course__tag">Pour 2</div></div>
       </div>
       <div class="menu-card__footer">
-        <div class="menu-card__accord">Accords mets &amp; vins · <span>+ 95 €</span></div>
-        <div class="menu-card__note">Nos menus sont élaborés avec des produits de saison. Allergènes et régimes particuliers sur demande lors de la réservation.</div>
+        <div class="menu-card__accord">Cuisson souhaitée · <span>Bleue · Saignante · À point · Bien cuite</span></div>
+        <div class="menu-card__note">Nos viandes sont sélectionnées parmi les meilleures races bouchères. Toutes nos préparations sont faites maison.</div>
       </div>
     </div>
   </div>
 
-  <!-- MENU CARTE BLANCHE -->
-  <div class="menu-display" id="menu-blanche">
+  <div class="menu-display" id="menu-mer">
     <div class="menu-card">
       <div class="menu-card__header">
-        <div>
-          <div class="menu-card__restaurant">Ardoise · ★★★</div>
-          <div class="menu-card__title">Menu Carte Blanche</div>
-        </div>
-        <div>
-          <div class="menu-card__services">12 services · Marché du jour</div>
-          <div class="menu-card__price-main">225 €</div>
-        </div>
+        <div><div class="menu-card__restaurant">Ô Ranch · Basse-Terre</div><div class="menu-card__title">Mer & Saveurs</div></div>
+        <div><div class="menu-card__services">Pêche locale & produits frais</div><div class="menu-card__price-main">Cuisine maison</div></div>
       </div>
       <div class="menu-card__body">
-        <div class="course">
-          <div class="course__num">·</div>
-          <div class="course__name">Le Menu Carte Blanche</div>
-          <div class="course__desc">Entièrement composé chaque matin par le Chef Étienne Marchand selon les arrivages du marché et l'inspiration du moment. Ce menu de 12 services est une expérience unique, différente à chaque service, fidèle à notre philosophie de la cuisine de l'essentiel.</div>
-          <div class="course__tag">Surprise</div>
-        </div>
-        <div class="course">
-          <div class="course__num">·</div>
-          <div class="course__name">Engagement du Chef</div>
-          <div class="course__desc">Produits exclusivement français, circuit ultra-court, producteurs partenaires depuis plus de vingt ans. Chaque assiette raconte une saison, un territoire, une rencontre.</div>
-          <div class="course__tag">Terroir</div>
-        </div>
-        <div class="course">
-          <div class="course__num">·</div>
-          <div class="course__name">Note</div>
-          <div class="course__desc">Ce menu requiert la confiance totale de nos hôtes. Merci de signaler vos allergies et intolérances lors de la réservation. Il n'est pas possible de modifier le déroulé des services une fois à table.</div>
-          <div class="course__tag">Information</div>
-        </div>
+        <div class="course"><div class="course__num">I</div><div class="course__name">Tartare de Thon</div><div class="course__desc">Thon frais local, avocat crémeux, citron vert des Antilles, coriandre fraîche, vinaigrette soja-gingembre, chips de plantain</div><div class="course__tag">Local</div></div>
+        <div class="course"><div class="course__num">II</div><div class="course__name">Poisson Sauce Champagne</div><div class="course__desc">Poisson du jour grillé ou poêlé, sauce champagne et crème légère, légumes du marché, riz créole parfumé</div><div class="course__tag">Pêche du jour</div></div>
+        <div class="course"><div class="course__num">III</div><div class="course__name">Crevettes Panées</div><div class="course__desc">Grosses crevettes panées croustillantes, sauce aigre-douce maison, salade fraîche, citron vert</div><div class="course__tag">Crispy</div></div>
+        <div class="course"><div class="course__num">IV</div><div class="course__name">Tataki de Thon</div><div class="course__desc">Thon mi-cuit au sésame, fleurs comestibles, sauce ponzu maison, pickles de légumes, riz blanc</div><div class="course__tag">Fusion</div></div>
+        <div class="course"><div class="course__num">V</div><div class="course__name">Assiette Apéro Maison</div><div class="course__desc">Crevettes panées, brochettes de poulet teriyaki, samosas croustillants, sauces maison — idéal à partager</div><div class="course__tag">À partager</div></div>
       </div>
       <div class="menu-card__footer">
-        <div class="menu-card__accord">Accords mets &amp; vins · <span>+ 145 €</span></div>
-        <div class="menu-card__note">Menu disponible uniquement au dîner, du mardi au samedi. Réservation au moins 48h à l'avance.</div>
+        <div class="menu-card__accord">Suggestions · <span>Riz créole · Frites maison · Légumes grillés</span></div>
+        <div class="menu-card__note">Poisson selon arrivage de la pêche locale. Produits frais travaillés chaque matin. Allergènes sur demande.</div>
       </div>
     </div>
   </div>
 
-  <!-- MENU VÉGÉTAL -->
-  <div class="menu-display" id="menu-vegetal">
+  <div class="menu-display" id="menu-desserts">
     <div class="menu-card">
       <div class="menu-card__header">
-        <div>
-          <div class="menu-card__restaurant">Ardoise · ★★★</div>
-          <div class="menu-card__title">Menu Végétal</div>
-        </div>
-        <div>
-          <div class="menu-card__services">7 services</div>
-          <div class="menu-card__price-main">155 €</div>
-        </div>
+        <div><div class="menu-card__restaurant">Ô Ranch · Basse-Terre</div><div class="menu-card__title">Douceurs Maison</div></div>
+        <div><div class="menu-card__services">Préparés sur place · Chaque jour</div><div class="menu-card__price-main">Desserts &amp; Gourmandises</div></div>
       </div>
       <div class="menu-card__body">
-        <div class="course">
-          <div class="course__num">I</div>
-          <div class="course__name">Amuse-bouche Végétal</div>
-          <div class="course__desc">Chips de topinambour, crème d'ail noir fermenté, mousse de châtaigne fumée, herbes du potager</div>
-          <div class="course__tag">Maison</div>
-        </div>
-        <div class="course">
-          <div class="course__num">II</div>
-          <div class="course__name">Betterave & Noisette</div>
-          <div class="course__desc">Betterave chioggia cuite en croûte de sel, sorbet de betterave jaune, émulsion de noisette torréfiée, vinaigre de framboises</div>
-          <div class="course__tag">Jardin</div>
-        </div>
-        <div class="course">
-          <div class="course__num">III</div>
-          <div class="course__name">Céleri & Truffe</div>
-          <div class="course__desc">Céleri-rave rôti entier au beurre noisette, truffe noire râpée, jus de céleri réduit, estragon cristallisé</div>
-          <div class="course__tag">Périgord</div>
-        </div>
-        <div class="course">
-          <div class="course__num">IV</div>
-          <div class="course__name">Risotto d'Épeautre</div>
-          <div class="course__desc">Épeautre de Haute-Provence, morilles fraîches poêlées, parmesan 36 mois, huile de truffe blanche d'Alba</div>
-          <div class="course__tag">Cereale</div>
-        </div>
-        <div class="course">
-          <div class="course__num">V</div>
-          <div class="course__name">Interlude</div>
-          <div class="course__desc">Granité de tomate verte, basilic grand vert, fleur de sel de Camargue</div>
-          <div class="course__tag">Fraîcheur</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VI</div>
-          <div class="course__name">Fromages Végétariens</div>
-          <div class="course__desc">Sélection de fromages au lait cru présure végétale, miel de châtaignier, noix fraîches de Grenoble</div>
-          <div class="course__tag">Affinés</div>
-        </div>
-        <div class="course">
-          <div class="course__num">VII</div>
-          <div class="course__name">Tarte Fine au Citron</div>
-          <div class="course__desc">Citron de Menton, crème légère à la verveine citronnelle, meringue soufflée, sorbet yuzu-gingembre</div>
-          <div class="course__tag">Dessert</div>
-        </div>
+        <div class="course"><div class="course__num">I</div><div class="course__name">Brownie Fondant</div><div class="course__desc">Brownie au chocolat noir, boule de glace vanille, chantilly, sauce chocolat chaude</div><div class="course__tag">Signature</div></div>
+        <div class="course"><div class="course__num">II</div><div class="course__name">Plateau Gourmand</div><div class="course__desc">Crème brûlée, mousse au chocolat chantilly, cheesecake fruits rouges — la douceur en trois temps</div><div class="course__tag">Plateau</div></div>
+        <div class="course"><div class="course__num">III</div><div class="course__name">Piña Colada Chantilly</div><div class="course__desc">Cocktail tropical ananas-coco, chantilly maison, décoration fruits frais — signature de la maison</div><div class="course__tag">Cocktail</div></div>
+        <div class="course"><div class="course__num">IV</div><div class="course__name">Verre Exotique Frais</div><div class="course__desc">Cocktail maison aux fruits tropicaux de Guadeloupe, servi sur la terrasse au coucher du soleil</div><div class="course__tag">Tropical</div></div>
       </div>
       <div class="menu-card__footer">
-        <div class="menu-card__accord">Accords mets &amp; vins · <span>+ 75 €</span></div>
-        <div class="menu-card__note">Menu 100% végétarien. Adaptable végétalien sur demande 48h à l'avance.</div>
+        <div class="menu-card__accord">Café &amp; digestif · <span>Rhum agricole de Guadeloupe · Sélection maison</span></div>
+        <div class="menu-card__note">Desserts préparés chaque matin par notre équipe. La disponibilité peut varier selon le service.</div>
       </div>
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__top">
-      <div>
-        <div class="footer__logo">Ardoise</div>
-        <div class="footer__tagline">La cuisine de l'essentiel</div>
-      </div>
+      <div><div class="footer__logo">Ô Ranch</div><div class="footer__tagline">La passion de la viande · Guadeloupe</div></div>
       <div>
         <div class="footer__col-title">Navigation</div>
         <ul class="footer__links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="menu.html">Le menu</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="reservation.html">Réservation</a></li>
+          <li><a href="index.html">Accueil</a></li><li><a href="menu.html">La carte</a></li>
+          <li><a href="about.html">À propos</a></li><li><a href="reservation.html">Réservation</a></li>
         </ul>
       </div>
       <div>
         <div class="footer__col-title">Nous trouver</div>
         <div class="footer__info">
-          <p>14, Rue des Quatre-Vents<br>75006 Paris</p>
-          <p style="margin-top:10px"><a href="tel:+33142687420">+33 1 42 68 74 20</a></p>
-          <p><a href="mailto:contact@ardoise-paris.fr">contact@ardoise-paris.fr</a></p>
-          <p style="margin-top:10px; font-size:11px; opacity:.6">Mar – Sam · 12h–14h30 · 19h–22h30</p>
+          <p>Route Armand D'ain<br>Saint-Claude 97120 · Guadeloupe</p>
+          <p style="margin-top:10px"><a href="tel:+590690370208">+590 690 37-02-08</a></p>
+          <p><a href="tel:+590590815564">0590 81 55 64</a></p>
+          <p style="margin-top:10px; font-size:11px; opacity:.6">Mar–Ven · 12h–14h30 · 19h–22h<br>Sam · 18h45–22h · Dim · 12h–14h30</p>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="footer__copy">© 2026 Ardoise · Restaurant Gastronomique · Paris</div>
+      <div class="footer__copy">© 2026 Ô Ranch · Steakhouse · Saint-Claude, Guadeloupe</div>
       <div class="footer__social">
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.instagram.com/o_ranch_gp/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
       </div>
     </div>
   </footer>
 
-<script>
-  function switchMenu(id, btn) {
-    document.querySelectorAll('.menu-display').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.menu-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('menu-' + id).classList.add('active');
-    btn.classList.add('active');
-  }
-</script>
+  <script>
+    function switchMenu(id, btn) {
+      document.querySelectorAll('.menu-display').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.menu-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById('menu-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
 
-<div class="nav-overlay" id="navOverlay">
-  <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
-  <nav class="nav-overlay__links">
-    <a href="index.html">Accueil</a>
-    <a href="menu.html" class="active">Menu</a>
-    <a href="reservation.html">Réservation</a>
-    <a href="about.html">Notre Restaurant</a>
-  </nav>
-</div>
-
-<script>
-(function(){
-  var burger  = document.querySelector('.nav__burger');
-  var overlay = document.getElementById('navOverlay');
-  function openMenu()  { burger.classList.add('open');    overlay.classList.add('open');    document.body.style.overflow='hidden'; }
-  function closeMenu() { burger.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
-  function toggle()    { overlay.classList.contains('open') ? closeMenu() : openMenu(); }
-  burger.addEventListener('click', toggle);
-  document.querySelector('.nav-overlay__close').addEventListener('click', closeMenu);
-  overlay.addEventListener('click', function(e){ if(e.target===overlay) closeMenu(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
-})();
-</script>
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
+    <nav class="nav-overlay__links">
+      <a href="index.html">Accueil</a><a href="menu.html" class="active">La Carte</a>
+      <a href="reservation.html">Réservation</a><a href="about.html">Notre Restaurant</a>
+    </nav>
+  </div>
+  <script>
+  (function(){
+    var burger=document.querySelector('.nav__burger'),overlay=document.getElementById('navOverlay');
+    function open(){burger.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden';}
+    function close(){burger.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';}
+    burger.addEventListener('click',function(){overlay.classList.contains('open')?close():open();});
+    document.querySelector('.nav-overlay__close').addEventListener('click',close);
+    overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  })();
+  </script>
 </body>
 </html>

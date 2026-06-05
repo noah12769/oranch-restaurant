@@ -4,141 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>À propos — ARDOISE</title>
+  <title>Notre Histoire — Ô Ranch · Steakhouse Guadeloupe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    :root { --ink:#0a0b0c; --cream:#f0ebe0; --cream2:#c8bfad; --gold:#b8a98a; --r:18px; }
+    :root {
+      --ink:    #16100A;
+      --cream:  #F5EDE0;
+      --cream2: #DCC89A;
+      --stone:  #726860;
+      --wood:   #D4942A;
+      --ember:  #C04018;
+      --green:  #3d6b35;
+      --r: 18px;
+    }
 
     html { background:var(--ink); }
     body { background:var(--ink); padding:10px; min-height:100vh; font-family:'Jost',sans-serif; }
 
     /* NAV */
     .nav-wrap { position:sticky; top:0; z-index:100; padding:0 0 10px 0; pointer-events:none; }
-    .nav { display:inline-flex; align-items:center; gap:4px; padding:9px 12px 9px 16px; background:rgba(8,7,6,.72); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); border:1px solid rgba(240,235,224,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); pointer-events:all; }
+    .nav { display:inline-flex; align-items:center; gap:4px; padding:9px 12px 9px 16px; background:rgba(16,10,6,.82); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border:1px solid rgba(200,185,165,.1); border-radius:999px; box-shadow:0 4px 24px rgba(0,0,0,.5); pointer-events:all; }
     .nav__burger { display:flex; flex-direction:column; gap:4.5px; cursor:pointer; padding:4px 6px; border-radius:999px; transition:background .2s; }
-    .nav__burger:hover { background:rgba(240,235,224,.08); }
+    .nav__burger:hover { background:rgba(235,224,202,.08); }
     .nav__burger span { display:block; width:18px; height:1.5px; background:var(--cream); }
     .nav__logo { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:19px; letter-spacing:.26em; color:var(--cream); text-transform:uppercase; padding:0 4px 0 6px; text-decoration:none; }
-    .nav__sep { width:1px; height:15px; background:rgba(240,235,224,.14); margin:0 6px; flex-shrink:0; }
+    .nav__sep { width:1px; height:15px; background:rgba(200,185,165,.14); margin:0 6px; flex-shrink:0; }
     .nav__links { display:flex; align-items:center; gap:2px; list-style:none; }
-    .nav__links a { display:block; font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,235,224,.58); text-decoration:none; padding:7px 13px; border-radius:999px; transition:background .2s, color .2s; white-space:nowrap; }
-    .nav__links a:hover { color:var(--cream); background:rgba(240,235,224,.1); }
-    .nav__links a.active { color:var(--cream); background:rgba(240,235,224,.14); }
+    .nav__links a { display:block; font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(235,224,202,.58); text-decoration:none; padding:7px 13px; border-radius:999px; transition:background .2s, color .2s; white-space:nowrap; }
+    .nav__links a:hover { color:var(--cream); background:rgba(235,224,202,.1); }
+    .nav__links a.active { color:var(--cream); background:rgba(235,224,202,.14); }
 
     /* SPLIT LAYOUT */
-    .split {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      min-height:calc(100vh - 200px);
-      margin-bottom:10px;
-    }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:10px; min-height:calc(100vh - 200px); margin-bottom:10px; }
 
-    /* LEFT — TEXT */
     @keyframes textReveal { from{opacity:0} to{opacity:1} }
-    .split__text {
-      border-radius:var(--r);
-      background:rgba(255,255,255,.025);
-      border:1px solid rgba(240,235,224,.07);
-      padding:52px 52px 52px;
-      animation:textReveal 1.8s 0.3s ease both;
-      overflow-y:auto;
-    }
+    .split__text { border-radius:var(--r); background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.08); padding:52px; animation:textReveal 1.8s 0.3s ease both; overflow-y:auto; }
 
-    .about__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.35em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .about__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.35em; text-transform:uppercase; color:var(--wood); margin-bottom:16px; }
     .about__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(42px,4vw,62px); color:var(--cream); line-height:.9; text-transform:uppercase; letter-spacing:-.01em; margin-bottom:36px; }
 
     .stars { display:flex; gap:6px; margin-bottom:32px; align-items:center; }
-    .stars__icon { color:var(--gold); font-size:18px; }
+    .stars__icon { color:var(--wood); font-size:18px; }
     .stars__label { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--cream2); margin-left:8px; }
 
     .about__lead { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--cream); line-height:1.55; margin-bottom:28px; }
     .about__body { font-family:'Jost',sans-serif; font-weight:300; font-size:13px; color:var(--cream2); line-height:1.85; margin-bottom:24px; }
 
-    .timeline { margin:36px 0; border-left:1px solid rgba(240,235,224,.1); padding-left:24px; display:flex; flex-direction:column; gap:24px; }
-    .timeline__item {}
-    .timeline__year { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px; color:var(--gold); margin-bottom:4px; }
+    .timeline { margin:36px 0; border-left:1px solid rgba(200,185,165,.1); padding-left:24px; display:flex; flex-direction:column; gap:24px; }
+    .timeline__year { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px; color:var(--wood); margin-bottom:4px; }
     .timeline__text { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.7; }
 
-    .divider { width:48px; height:1px; background:var(--gold); opacity:.4; margin:32px 0; }
+    .divider { width:48px; height:1px; background:var(--wood); opacity:.4; margin:32px 0; }
 
-    .chef-card { display:flex; gap:20px; align-items:flex-start; padding:24px; background:rgba(255,255,255,.03); border-radius:12px; border:1px solid rgba(240,235,224,.07); }
-    .chef-card__avatar { width:56px; height:56px; border-radius:50%; background:rgba(184,169,138,.15); border:1px solid rgba(184,169,138,.2); flex-shrink:0; background-size:cover; background-position:center 10%; overflow:hidden; }
+    .chef-card { display:flex; gap:20px; align-items:flex-start; padding:24px; background:rgba(235,220,200,.03); border-radius:12px; border:1px solid rgba(200,185,165,.07); }
+    .chef-card__avatar { width:56px; height:56px; border-radius:50%; background:rgba(122,78,36,.15); border:1px solid rgba(122,78,36,.2); flex-shrink:0; background-size:cover; background-position:center 10%; overflow:hidden; }
     .chef-card__name { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:20px; color:var(--cream); margin-bottom:4px; }
-    .chef-card__role { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+    .chef-card__role { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--wood); margin-bottom:8px; }
     .chef-card__bio { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.7; }
 
     .awards { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:32px; }
-    .award { padding:16px; background:rgba(255,255,255,.03); border-radius:10px; border:1px solid rgba(240,235,224,.06); }
+    .award { padding:16px; background:rgba(235,220,200,.03); border-radius:10px; border:1px solid rgba(200,185,165,.06); }
     .award__value { font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--cream); }
     .award__label { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream2); margin-top:4px; }
 
-    /* RIGHT — IMAGE */
-    .split__image {
-      border-radius:var(--r);
-      overflow:hidden;
-      position:relative;
-      min-height:600px;
+    /* RIGHT IMAGE */
+    .split__image { border-radius:var(--r); overflow:hidden; position:relative; min-height:600px; }
+    .split__image__photo { position:absolute; inset:0; background-image:url('images/un-cadre-depaysant-installez.jpg'); background-size:cover; background-position:center; }
+    .split__image__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(22,16,10,.55) 0%, transparent 60%); }
+    .split__image__caption { position:absolute; bottom:24px; left:24px; right:24px; }
+    .split__image__caption p { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:14px; color:rgba(235,224,202,.7); line-height:1.6; }
+
+    /* ── GALLERY MARQUEE ───────────────────────────────────────── */
+    .gallery { margin-top:10px; border-radius:var(--r); background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.07); padding:44px 0 36px; overflow:hidden; }
+    .gallery__header { display:flex; justify-content:space-between; align-items:flex-end; padding:0 44px; margin-bottom:28px; }
+    .gallery__eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.35em; text-transform:uppercase; color:var(--wood); margin-bottom:10px; }
+    .gallery__title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,3vw,44px); color:var(--cream); line-height:1; text-transform:uppercase; }
+    .gallery__hint { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--stone); }
+
+    .marquee { overflow:hidden; height:500px; position:relative; }
+    .marquee::before,
+    .marquee::after {
+      content:''; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none;
     }
-    .split__image__photo {
-      position:absolute; inset:0;
-      background-image:url('https://images.pexels.com/photos/4253309/pexels-photo-4253309.jpeg?auto=compress&cs=tinysrgb&w=1200');
-      background-size:cover;
-      background-position:center center;
+    .marquee::before { left:0; background:linear-gradient(to right, var(--ink) 0%, transparent 100%); }
+    .marquee::after  { right:0; background:linear-gradient(to left,  var(--ink) 0%, transparent 100%); }
+
+    .marquee__track {
+      display:flex;
+      height:100%;
+      /* each slide = 390px (380 content + 10 margin) → 15 slides = 5850px → -50% loops seamlessly */
+      animation: marquee-roll 55s linear infinite;
+      width: max-content;
     }
-    .split__image__overlay {
-      position:absolute; inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 60%);
+    .marquee__track:hover { animation-play-state: paused; }
+
+    @keyframes marquee-roll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
-    .split__image__caption {
-      position:absolute; bottom:24px; left:24px; right:24px;
+
+    .marquee__slide {
+      flex-shrink: 0;
+      width: 380px;
+      height: 100%;
+      margin-right: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
     }
-    .split__image__caption p { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:14px; color:rgba(240,235,224,.7); line-height:1.6; }
+    .marquee__slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform .6s ease;
+    }
+    .marquee__slide:hover img { transform: scale(1.04); }
+
+    @media (max-width: 700px) {
+      .marquee { height: 300px; }
+      .marquee__slide { width: 260px; }
+      .gallery__header { padding: 0 24px; }
+      .gallery { padding: 32px 0 28px; }
+    }
+    @media (max-width: 480px) {
+      .marquee { height: 220px; }
+      .marquee__slide { width: 200px; }
+    }
 
     /* FOOTER */
-    .footer { margin-top:10px; border-radius:var(--r); background:rgba(15,12,10,.7); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(240,235,224,.07); padding:36px 44px 28px; }
+    .footer { margin-top:10px; border-radius:var(--r); background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(200,185,165,.07); padding:36px 44px 28px; }
     .footer__top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; margin-bottom:28px; }
     .footer__logo { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:28px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream); margin-bottom:8px; }
-    .footer__tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--gold); }
-    .footer__col-title { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .footer__tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--wood); }
+    .footer__col-title { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--wood); margin-bottom:14px; }
     .footer__links { list-style:none; display:flex; flex-direction:column; gap:8px; }
     .footer__links a { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--cream2); text-decoration:none; transition:color .2s; }
     .footer__links a:hover { color:var(--cream); }
     .footer__info p { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; color:var(--cream2); line-height:1.8; }
     .footer__info a { color:var(--cream2); text-decoration:none; }
     .footer__info a:hover { color:var(--cream); }
-    .footer__bottom { border-top:1px solid rgba(240,235,224,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; }
-    .footer__copy { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.12em; color:rgba(200,191,173,.35); }
+    .footer__bottom { border-top:1px solid rgba(200,185,165,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; }
+    .footer__copy { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.12em; color:rgba(168,148,120,.35); }
     .footer__social { display:flex; gap:16px; }
-    .footer__social a { color:rgba(240,235,224,.35); transition:color .2s; }
+    .footer__social a { color:rgba(235,224,202,.35); transition:color .2s; }
     .footer__social a:hover { color:var(--cream); }
     .footer__social svg { width:14px; height:14px; fill:currentColor; }
 
-    /* ── RESPONSIVE ───────────────────────────────────────────── */
     @media (max-width: 900px) {
-      .split { grid-template-columns: 1fr 1fr; }
-      .split__text { padding: 36px 36px; }
+      .split__text { padding: 36px; }
       .about__title { font-size: clamp(34px, 5vw, 52px); }
     }
-
     @media (max-width: 700px) {
       body { padding: 8px; }
       .nav { padding: 8px 10px 8px 12px; }
       .nav__logo { font-size: 16px; letter-spacing: .2em; }
       .nav__links a { padding: 6px 8px; font-size: 9.5px; letter-spacing: .12em; }
       .split { grid-template-columns: 1fr; gap: 8px; min-height: auto; }
-      .split__image { min-height: 55vw; order: -1; border-radius: var(--r); }
-      .split__image__photo { background-position: center 15%; }
+      .split__image { min-height: 55vw; order: -1; }
       .split__text { padding: 32px 28px; animation: none; opacity: 1; }
       .about__title { font-size: clamp(36px, 10vw, 56px); }
       .awards { grid-template-columns: 1fr 1fr; }
       .footer__top { grid-template-columns: 1fr; gap: 24px; }
       .footer { padding: 28px 24px 20px; }
     }
-
     @media (max-width: 480px) {
       .split__image { min-height: 260px; }
       .split__text { padding: 24px 20px; }
@@ -149,44 +182,31 @@
       .chef-card { flex-direction: column; }
     }
 
-    /* ── BURGER → CROIX ──────────────────────────────────── */
     .nav__burger span { transition: transform .35s cubic-bezier(.16,1,.3,1), opacity .25s; }
     .nav__burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
     .nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4.5px); }
-
-    /* ── OVERLAY NAVIGATION ──────────────────────────────── */
-    .nav-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      background: rgba(10,11,12,.96);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none;
-      transition: opacity .4s cubic-bezier(.16,1,.3,1);
-    }
+    .nav-overlay { position: fixed; inset: 0; z-index: 9999; background: rgba(22,16,10,.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .4s cubic-bezier(.16,1,.3,1); }
     .nav-overlay.open { opacity: 1; pointer-events: all; }
-    .nav-overlay__close {
-      position: absolute; top: 20px; left: 20px;
-      width: 44px; height: 40px;
-      background: rgba(8,7,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border: 1px solid rgba(240,235,224,.1); border-radius: 999px;
-      box-shadow: 0 4px 24px rgba(0,0,0,.5);
-      cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;
-    }
+    .nav-overlay__close { position: absolute; top: 20px; left: 20px; width: 44px; height: 40px; background: rgba(16,10,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border: 1px solid rgba(200,185,165,.1); border-radius: 999px; box-shadow: 0 4px 24px rgba(0,0,0,.5); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
     .nav-overlay__close span { position: absolute; display: block; width: 18px; height: 1.5px; background: var(--cream); }
     .nav-overlay__close span:nth-child(1) { transform: rotate(45deg); }
     .nav-overlay__close span:nth-child(2) { transform: rotate(-45deg); }
     .nav-overlay__links { display: flex; flex-direction: column; align-items: center; gap: 28px; width: 100%; padding: 0 20px; }
-    .nav-overlay__links a {
-      font-family: 'Cormorant Garamond', serif; font-weight: 300;
-      font-size: clamp(28px, 8vw, 50px);
-      letter-spacing: .05em; text-transform: uppercase;
-      color: var(--cream); text-decoration: none;
-      opacity: .45; transition: opacity .25s, letter-spacing .35s;
-      display: block; text-align: center; width: 100%;
-    }
+    .nav-overlay__links a { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(28px, 8vw, 50px); letter-spacing: .05em; text-transform: uppercase; color: var(--cream); text-decoration: none; opacity: .45; transition: opacity .25s, letter-spacing .35s; display: block; text-align: center; width: 100%; }
     .nav-overlay__links a.active { opacity: .9; }
     .nav-overlay__links a:hover { opacity: 1; letter-spacing: .08em; }
+
+    /* ── BOIS SUR LES CASES ─────────────────────────────── */
+    #wood-bg { display:none; }
+    .split__text, .gallery {
+      background:
+        linear-gradient(rgba(10,6,2,.52), rgba(10,6,2,.52)),
+        url('images/wood-panel.jpg') center / cover !important;
+    }
+
+    /* ── CORDE SÉPARATRICE ──────────────────────────────────── */
+    .rope-sep { display:none; }
   </style>
 </head>
 <body>
@@ -194,155 +214,187 @@
   <div class="nav-wrap">
     <nav class="nav">
       <div class="nav__burger"><span></span><span></span><span></span></div>
-      <a class="nav__logo" href="index.html">Ardoise</a>
+      <a class="nav__logo" href="index.html">Ô Ranch</a>
       <div class="nav__sep"></div>
       <ul class="nav__links">
-        <li><a href="menu.html">Menu</a></li>
+        <li><a href="menu.html">La Carte</a></li>
         <li><a href="about.html" class="active">À propos</a></li>
         <li><a href="reservation.html">Réserver</a></li>
       </ul>
     </nav>
   </div>
 
-  <div class="split">
+<!-- Fond bois SVG (test 1) -->
+<div id="wood-bg" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="wf" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.006 0.15" numOctaves="6" seed="42"/>
+        <feColorMatrix type="matrix" values="0.29 0 0 0 0.51  0.25 0 0 0 0.40  0.14 0 0 0 0.24  0 0 0 0 1"/>
+      </filter>
+    </defs>
+    <rect width="100%" height="100%" filter="url(#wf)"/>
+  </svg>
+</div>
 
-    <!-- LEFT : TEXTE -->
+  <div class="split">
     <div class="split__text">
-      <div class="about__eyebrow">Notre histoire · Depuis 1987</div>
-      <div class="about__title">L'Âme<br>d'Ardoise</div>
+      <div class="about__eyebrow">Notre histoire · Saint-Claude, Basse-Terre</div>
+      <div class="about__title">L'Âme<br>du Ranch</div>
 
       <div class="stars">
-        <span class="stars__icon">★</span>
-        <span class="stars__icon">★</span>
-        <span class="stars__icon">★</span>
-        <span class="stars__label">Michelin · 3 étoiles depuis 2003</span>
+        <span class="stars__icon">★</span><span class="stars__icon">★</span>
+        <span class="stars__icon">★</span><span class="stars__icon">★</span>
+        <span class="stars__label">TripAdvisor · 4.0/5 · #2 à Saint-Claude</span>
       </div>
 
-      <p class="about__lead">Ardoise est né d'une conviction simple&nbsp;: que la grande cuisine n'est pas celle qui éblouit, mais celle qui émeut.</p>
+      <p class="about__lead">Ô Ranch est né d'une passion simple&nbsp;: celle de la viande d'exception, servie dans la nature généreuse de la Basse-Terre guadeloupéenne.</p>
 
-      <p class="about__body">En 1987, Jean-Pierre Marchand, cuisinier autodidacte originaire de Corrèze, ouvre une petite salle de quatorze couverts rue des Quatre-Vents. L'ardoise — ce tableau noir sur lequel il inscrivait chaque jour ses deux plats du marché — donnait son nom à la maison. La cuisine était simple, directe, sans artifice. Les produits parlaient.</p>
+      <p class="about__body">Niché sur les hauteurs de Saint-Claude, au pied du volcan Soufrière, Ô Ranch s'est imposé comme la référence du steakhouse en Guadeloupe. Une architecture bois et pierre, une terrasse au cœur de la végétation tropicale, une cuisine généreuse et sincère.</p>
 
-      <p class="about__body">En 1995, le Michelin lui accorde sa première étoile. Le monde découvre ce que le quartier savait depuis longtemps. En 2001, la deuxième étoile transforme Ardoise en destination. Trois ans plus tard, la troisième étoile consacre une philosophie au-delà d'une technique.</p>
+      <p class="about__body">La carte privilégie les plus belles races bouchères — Black Angus, Tomahawk — préparées avec le soin d'une maison qui ne transige pas sur la qualité. Chaque pièce est saisie à la perfection, servie dans une ambiance chaleureuse qui est la vraie signature du Ranch.</p>
 
-      <p class="about__body">Aujourd'hui, Étienne Marchand, petit-fils de Jean-Pierre, perpétue cet héritage avec la même exigence et une créativité renouvelée. Formé à Lausanne, passé par les cuisines de Ducasse et de Gagnaire, il est revenu à Paris avec une certitude&nbsp;: la cuisine de l'essentiel est la plus difficile et la plus sincère.</p>
+      <p class="about__body">Du tournedos façon Rossini aux brochettes de bœuf grillées à la braise, en passant par le tartare de thon ou le poisson sauce champagne, chaque assiette sublime les saveurs brutes, celles qui n'ont pas besoin d'artifices pour éblouir.</p>
 
       <div class="divider"></div>
 
       <div class="timeline">
         <div class="timeline__item">
-          <div class="timeline__year">1987</div>
-          <div class="timeline__text">Ouverture d'Ardoise par Jean-Pierre Marchand. 14 couverts, une ardoise, deux plats.</div>
+          <div class="timeline__year">Les débuts</div>
+          <div class="timeline__text">Ouverture d'Ô Ranch à Saint-Claude. Un pari : servir une viande d'exception dans un cadre naturel unique de la Basse-Terre.</div>
         </div>
         <div class="timeline__item">
-          <div class="timeline__year">1995</div>
-          <div class="timeline__text">Première étoile Michelin. Le Guide décrit "une cuisine d'une honnêteté remarquable".</div>
+          <div class="timeline__year">La signature</div>
+          <div class="timeline__text">La cuisine maison et l'ambiance conviviale s'imposent. La clientèle locale fait confiance au Ranch pour ses grandes occasions.</div>
         </div>
         <div class="timeline__item">
-          <div class="timeline__year">2001</div>
-          <div class="timeline__text">Deuxième étoile. Rénovation de la salle — 32 couverts, même esprit.</div>
+          <div class="timeline__year">La reconnaissance</div>
+          <div class="timeline__text">Ô Ranch décroche la 2ème place des restaurants de Saint-Claude sur TripAdvisor, sur 7 établissements.</div>
         </div>
         <div class="timeline__item">
-          <div class="timeline__year">2003</div>
-          <div class="timeline__text">Troisième étoile Michelin. Ardoise rejoint les grandes tables de France.</div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__year">2008</div>
-          <div class="timeline__text">Étienne Marchand reprend les cuisines. La maison entre dans une nouvelle ère.</div>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__year">2024</div>
-          <div class="timeline__text">Renouvellement de la 3e étoile pour la 21e année consécutive.</div>
+          <div class="timeline__year">Aujourd'hui</div>
+          <div class="timeline__text">Note 4.0/5 · 16 avis de voyageurs · 29 photos de clients. Une adresse incontournable de la Guadeloupe gourmande.</div>
         </div>
       </div>
 
       <div class="divider"></div>
 
       <div class="chef-card">
-        <div class="chef-card__avatar" style="background-image:url('https://images.pexels.com/photos/8477058/pexels-photo-8477058.jpeg?auto=compress&cs=tinysrgb&w=200');"></div>
+        <div class="chef-card__avatar" style="background-image:url('images/un-cadre-authentique.jpg'); background-position:center top;"></div>
         <div>
-          <div class="chef-card__name">Étienne Marchand</div>
-          <div class="chef-card__role">Chef Exécutif · Propriétaire</div>
-          <div class="chef-card__bio">Formé à l'École Hôtelière de Lausanne, Étienne Marchand a travaillé aux côtés d'Alain Ducasse au Louis XV de Monaco et de Pierre Gagnaire à Paris avant de reprendre Ardoise en 2008. Sa cuisine est une conversation entre la mémoire et le territoire.</div>
+          <div class="chef-card__name">L'Équipe du Ranch</div>
+          <div class="chef-card__role">Grill Masters · Cuisine du Cœur</div>
+          <div class="chef-card__bio">Passionnés de viande et de terroir créole, les artisans d'Ô Ranch mettent chaque jour leur savoir-faire au service de votre plaisir. Une cuisine franche, honnête, qui respecte la matière première et les saveurs authentiques de Guadeloupe.</div>
         </div>
       </div>
 
       <div class="awards">
-        <div class="award"><div class="award__value">★★★</div><div class="award__label">Michelin depuis 2003</div></div>
-        <div class="award"><div class="award__value">19/20</div><div class="award__label">Gault & Millau 2025</div></div>
-        <div class="award"><div class="award__value">32</div><div class="award__label">Couverts par service</div></div>
-        <div class="award"><div class="award__value">1987</div><div class="award__label">Année de fondation</div></div>
+        <div class="award"><div class="award__value">4.0/5</div><div class="award__label">TripAdvisor</div></div>
+        <div class="award"><div class="award__value">#2 / 7</div><div class="award__label">Saint-Claude</div></div>
+        <div class="award"><div class="award__value">Black<br>Angus</div><div class="award__label">Viandes premium</div></div>
+        <div class="award"><div class="award__value">6/7</div><div class="award__label">Jours d'ouverture</div></div>
       </div>
     </div>
 
-    <!-- RIGHT : IMAGE -->
     <div class="split__image">
       <div class="split__image__photo"></div>
       <div class="split__image__overlay"></div>
       <div class="split__image__caption">
-        <p>La brigade d'Ardoise en service du soir.<br>14, Rue des Quatre-Vents · Paris VI</p>
+        <p>La terrasse d'Ô Ranch en soirée.<br>Route Armand D'ain · Saint-Claude, Basse-Terre</p>
       </div>
     </div>
-
   </div>
 
-  <!-- FOOTER -->
+  <div class="rope-sep" aria-hidden="true"><span class="rope-line"></span></div>
+
+  <!-- GALERIE DÉFILANTE -->
+  <section class="gallery">
+    <div class="gallery__header">
+      <div>
+        <div class="gallery__eyebrow">Galerie · Photos du restaurant</div>
+        <div class="gallery__title">En Images</div>
+      </div>
+      <div class="gallery__hint">Survolez pour pause</div>
+    </div>
+
+    <div class="marquee">
+      <div class="marquee__track" id="marquee-track">
+        <div class="marquee__slide"><img src="images/un-cadre-authentique.jpg" alt="Entrée Ô Ranch"></div>
+        <div class="marquee__slide"><img src="images/un-cadre-depaysant-installez.jpg" alt="Terrasse Ô Ranch"></div>
+        <div class="marquee__slide"><img src="images/l-incontournable-tomahawk6.jpg" alt="Tomahawk"></div>
+        <div class="marquee__slide"><img src="images/tournedos-de-beouf-black9.jpg" alt="Tournedos Black Angus"></div>
+        <div class="marquee__slide"><img src="images/caption6.jpg" alt="Viande grillée"></div>
+        <div class="marquee__slide"><img src="images/caption5.jpg" alt="Tataki de thon"></div>
+        <div class="marquee__slide"><img src="images/caption.jpg" alt="Crevettes panées"></div>
+        <div class="marquee__slide"><img src="images/caption1.jpg" alt="Poisson sauce champagne"></div>
+        <div class="marquee__slide"><img src="images/caption2.jpg" alt="Tartare et frites"></div>
+        <div class="marquee__slide"><img src="images/caption7.jpg" alt="Assiette apéro"></div>
+        <div class="marquee__slide"><img src="images/caption4.jpg" alt="Salade fraîche"></div>
+        <div class="marquee__slide"><img src="images/caption3.jpg" alt="Brownie fondant"></div>
+        <div class="marquee__slide"><img src="images/caption8.jpg" alt="Plateau desserts"></div>
+        <div class="marquee__slide"><img src="images/pina-colada-chantilly.jpg" alt="Piña colada chantilly"></div>
+        <div class="marquee__slide"><img src="images/un-verre-exotique-frais.jpg" alt="Cocktail exotique"></div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="footer__top">
-      <div>
-        <div class="footer__logo">Ardoise</div>
-        <div class="footer__tagline">La cuisine de l'essentiel</div>
-      </div>
+      <div><div class="footer__logo">Ô Ranch</div><div class="footer__tagline">La passion de la viande · Guadeloupe</div></div>
       <div>
         <div class="footer__col-title">Navigation</div>
         <ul class="footer__links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="menu.html">Le menu</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="reservation.html">Réservation</a></li>
+          <li><a href="index.html">Accueil</a></li><li><a href="menu.html">La carte</a></li>
+          <li><a href="about.html">À propos</a></li><li><a href="reservation.html">Réservation</a></li>
         </ul>
       </div>
       <div>
         <div class="footer__col-title">Nous trouver</div>
         <div class="footer__info">
-          <p>14, Rue des Quatre-Vents<br>75006 Paris</p>
-          <p style="margin-top:10px"><a href="tel:+33142687420">+33 1 42 68 74 20</a></p>
-          <p><a href="mailto:contact@ardoise-paris.fr">contact@ardoise-paris.fr</a></p>
-          <p style="margin-top:10px; font-size:11px; opacity:.6">Mar – Sam · 12h–14h30 · 19h–22h30</p>
+          <p>Route Armand D'ain<br>Saint-Claude 97120 · Guadeloupe</p>
+          <p style="margin-top:10px"><a href="tel:+590690370208">+590 690 37-02-08</a></p>
+          <p><a href="tel:+590590815564">0590 81 55 64</a></p>
+          <p style="margin-top:10px; font-size:11px; opacity:.6">Mar–Ven · 12h–14h30 · 19h–22h<br>Sam · 18h45–22h · Dim · 12h–14h30</p>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="footer__copy">© 2026 Ardoise · Restaurant Gastronomique · Paris</div>
+      <div class="footer__copy">© 2026 Ô Ranch · Steakhouse · Saint-Claude, Guadeloupe</div>
       <div class="footer__social">
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="#"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.instagram.com/o_ranch_gp/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
       </div>
     </div>
   </footer>
 
-
-<div class="nav-overlay" id="navOverlay">
-  <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
-  <nav class="nav-overlay__links">
-    <a href="index.html">Accueil</a>
-    <a href="menu.html">Menu</a>
-    <a href="reservation.html">Réservation</a>
-    <a href="about.html" class="active">Notre Restaurant</a>
-  </nav>
-</div>
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
+    <nav class="nav-overlay__links">
+      <a href="index.html">Accueil</a><a href="menu.html">La Carte</a>
+      <a href="reservation.html">Réservation</a><a href="about.html" class="active">Notre Restaurant</a>
+    </nav>
+  </div>
 
 <script>
-(function(){
-  var burger  = document.querySelector('.nav__burger');
-  var overlay = document.getElementById('navOverlay');
-  function openMenu()  { burger.classList.add('open');    overlay.classList.add('open');    document.body.style.overflow='hidden'; }
-  function closeMenu() { burger.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
-  function toggle()    { overlay.classList.contains('open') ? closeMenu() : openMenu(); }
-  burger.addEventListener('click', toggle);
-  document.querySelector('.nav-overlay__close').addEventListener('click', closeMenu);
-  overlay.addEventListener('click', function(e){ if(e.target===overlay) closeMenu(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
-})();
-</script>
+  /* Duplicate slides for seamless infinite scroll */
+  (function(){
+    var track = document.getElementById('marquee-track');
+    if (!track) return;
+    var slides = Array.from(track.children);
+    slides.forEach(function(s){ track.appendChild(s.cloneNode(true)); });
+  })();
+  </script>
+
+  <script>
+  (function(){
+    var burger=document.querySelector('.nav__burger'),overlay=document.getElementById('navOverlay');
+    function open(){burger.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden';}
+    function close(){burger.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';}
+    burger.addEventListener('click',function(){overlay.classList.contains('open')?close():open();});
+    document.querySelector('.nav-overlay__close').addEventListener('click',close);
+    overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  })();
+  </script>
 </body>
 </html>

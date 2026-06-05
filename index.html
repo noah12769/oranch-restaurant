@@ -4,13 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>ARDOISE — Restaurant Gastronomique</title>
+  <title>Ô Ranch — Steakhouse · Saint-Claude, Guadeloupe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --ink:#0a0b0c; --cream:#f0ebe0; --cream2:#c8bfad; --r:18px; }
+    :root {
+      --ink:    #16100A;
+      --cream:  #F5EDE0;
+      --cream2: #DCC89A;
+      --stone:  #726860;
+      --wood:   #D4942A;
+      --ember:  #C04018;
+      --green:  #3d6b35;
+      --r: 18px;
+    }
 
     html, body { width:100%; height:100%; background:var(--ink); overflow:hidden; }
     body { padding:10px; }
@@ -21,17 +30,17 @@
     .hero__left { position:relative; flex:1; border-radius:var(--r); overflow:hidden; }
     .hero__left__bg {
       position:absolute; inset:0;
-      background-image:url('https://images.pexels.com/photos/5865244/pexels-photo-5865244.jpeg?auto=compress&cs=tinysrgb&w=1920');
-      background-size:cover; background-position:center 40%;
+      background-image:url('images/un-cadre-authentique.jpg');
+      background-size:cover; background-position:center 20%;
       transform:scale(1.02); transition:transform 8s ease;
     }
     .hero__left:hover .hero__left__bg { transform:scale(1.06); }
     .hero__left__overlay {
       position:absolute; inset:0;
       background:
-        linear-gradient(to top,   rgba(0,0,0,.78) 0%, rgba(0,0,0,.1) 50%, transparent 100%),
-        linear-gradient(to right, rgba(0,0,0,.35) 0%, transparent 60%),
-        linear-gradient(to bottom,rgba(0,0,0,.4)  0%, transparent 30%);
+        linear-gradient(to top,   rgba(22,16,10,.84) 0%, rgba(22,16,10,.1) 50%, transparent 100%),
+        linear-gradient(to right, rgba(22,16,10,.4) 0%, transparent 60%),
+        linear-gradient(to bottom,rgba(22,16,10,.48) 0%, transparent 30%);
     }
 
     /* NAV PILL */
@@ -39,20 +48,20 @@
       position:absolute; top:20px; left:20px; z-index:10;
       display:inline-flex; align-items:center; gap:4px;
       padding:9px 12px 9px 16px;
-      background:rgba(8,7,6,.58); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
-      border:1px solid rgba(240,235,224,.1); border-radius:999px;
-      box-shadow:0 4px 24px rgba(0,0,0,.35);
+      background:rgba(16,10,6,.65); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+      border:1px solid rgba(200,185,165,.12); border-radius:999px;
+      box-shadow:0 4px 24px rgba(0,0,0,.4);
       animation:fadeDown .7s .05s cubic-bezier(.16,1,.3,1) both;
     }
     .nav__burger { display:flex; flex-direction:column; gap:4.5px; cursor:pointer; padding:4px 6px; border-radius:999px; transition:background .2s; }
-    .nav__burger:hover { background:rgba(240,235,224,.08); }
+    .nav__burger:hover { background:rgba(235,224,202,.08); }
     .nav__burger span { display:block; width:18px; height:1.5px; background:var(--cream); }
     .nav__logo { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:19px; letter-spacing:.26em; color:var(--cream); text-transform:uppercase; padding:0 4px 0 6px; text-decoration:none; }
-    .nav__sep { width:1px; height:15px; background:rgba(240,235,224,.14); margin:0 6px; flex-shrink:0; }
+    .nav__sep { width:1px; height:15px; background:rgba(200,185,165,.14); margin:0 6px; flex-shrink:0; }
     .nav__links { display:flex; align-items:center; gap:2px; list-style:none; }
-    .nav__links a { display:block; font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,235,224,.58); text-decoration:none; padding:7px 13px; border-radius:999px; transition:background .2s, color .2s; white-space:nowrap; }
-    .nav__links a:hover { color:var(--cream); background:rgba(240,235,224,.1); }
-    .nav__links a.active { color:var(--cream); background:rgba(240,235,224,.14); }
+    .nav__links a { display:block; font-family:'Jost',sans-serif; font-weight:300; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(235,224,202,.58); text-decoration:none; padding:7px 13px; border-radius:999px; transition:background .2s, color .2s; white-space:nowrap; }
+    .nav__links a:hover { color:var(--cream); background:rgba(235,224,202,.1); }
+    .nav__links a.active { color:var(--cream); background:rgba(235,224,202,.14); }
 
     /* HEADLINE */
     .hero__headline { position:absolute; bottom:48px; left:36px; z-index:10; line-height:.88; }
@@ -63,7 +72,7 @@
 
     /* SOCIAL */
     .hero__social { position:absolute; bottom:52px; right:36px; z-index:10; display:flex; gap:18px; align-items:center; animation:fadeUp .7s .35s cubic-bezier(.16,1,.3,1) both; }
-    .hero__social a { color:rgba(240,235,224,.45); transition:color .2s; text-decoration:none; display:flex; }
+    .hero__social a { color:rgba(235,224,202,.45); transition:color .2s; text-decoration:none; display:flex; }
     .hero__social a:hover { color:var(--cream); }
     .hero__social svg { width:15px; height:15px; fill:currentColor; }
 
@@ -71,13 +80,13 @@
     .hero__right { width:min(27vw,350px); display:flex; flex-direction:column; flex-shrink:0; gap:10px; animation:revealR .85s .1s cubic-bezier(.16,1,.3,1) both; }
 
     /* PANELS */
-    .panel { position:relative; flex:1; border-radius:var(--r); overflow:hidden; cursor:pointer; background:var(--ink); display:block; text-decoration:none; }
+    .panel { position:relative; flex:1; border-radius:var(--r); overflow:hidden; cursor:pointer; background:rgba(10,6,2,.78); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); display:block; text-decoration:none; }
     .panel__photo { position:absolute; inset:0; background-size:cover; background-position:center; transition:transform .7s cubic-bezier(.25,.46,.45,.94); }
     .panel:hover .panel__photo { transform:scale(1.05); }
-    .panel--menu    .panel__photo { background-image:url('https://images.pexels.com/photos/2403392/pexels-photo-2403392.jpeg?auto=compress&cs=tinysrgb&w=800'); background-position:center 30%; }
-    .panel--resy    .panel__photo { background-image:url('https://images.pexels.com/photos/1850595/pexels-photo-1850595.jpeg?auto=compress&cs=tinysrgb&w=800'); background-position:center 20%; }
-    .panel--resto   .panel__photo { background-image:url('https://images.pexels.com/photos/4577692/pexels-photo-4577692.jpeg?auto=compress&cs=tinysrgb&w=800'); background-position:center; }
-    .panel__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.62) 0%, rgba(0,0,0,.05) 50%, transparent 100%); }
+    .panel--menu    .panel__photo { background-image:url('images/l-incontournable-tomahawk6.jpg'); background-position:center; }
+    .panel--resy    .panel__photo { background-image:url('images/pina-colada-chantilly.jpg'); background-position:center 30%; }
+    .panel--resto   .panel__photo { background-image:url('images/un-cadre-depaysant-installez.jpg'); background-position:center; }
+    .panel__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(22,16,10,.70) 0%, rgba(22,16,10,.05) 50%, transparent 100%); }
     .panel__label { position:absolute; bottom:16px; right:18px; z-index:5; display:flex; align-items:center; gap:8px; font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--cream2); transition:color .2s, gap .25s; }
     .panel:hover .panel__label { color:var(--cream); gap:13px; }
     .panel__label .arr { font-size:13px; transition:transform .25s; }
@@ -95,7 +104,6 @@
       .hero__right { width: min(32vw, 280px); }
       .hero__headline h1 { font-size: clamp(48px, 8vw, 80px); }
     }
-
     @media (max-width: 700px) {
       html, body { overflow: hidden; height: 100%; }
       body { padding: 8px; }
@@ -111,26 +119,13 @@
       .hero__headline h1 { font-size: clamp(44px, 13vw, 68px); }
       .hero__social { bottom: 36px; right: 20px; gap: 14px; }
     }
-
     @media (max-width: 480px) {
-      /* Navbar : réduire la taille pour que tout tienne */
       .nav { padding: 7px 9px 7px 12px; gap: 2px; }
       .nav__logo { font-size: 13px; letter-spacing: .15em; }
       .nav__sep { margin: 0 3px; }
       .nav__links a { font-size: 8px; letter-spacing: .09em; padding: 5px 6px; }
-
-      /* Panneaux droits : plus de hauteur pour les labels sur 2 lignes */
       .hero__right { height: 120px; }
-
-      /* Panel labels : police d'origine, retour à la ligne, gap avec les bords */
-      .panel__label {
-        bottom: 12px; left: 12px; right: 12px;
-        letter-spacing: .06em;
-        flex-direction: column; align-items: flex-start;
-        gap: 3px; overflow-wrap: break-word;
-      }
-
-      /* Titre + icônes sociales : séparation verticale */
+      .panel__label { bottom: 12px; left: 12px; right: 12px; letter-spacing: .06em; flex-direction: column; align-items: flex-start; gap: 3px; overflow-wrap: break-word; }
       .hero__headline { bottom: 52px; left: 20px; }
       .hero__headline h1 { font-size: clamp(34px, 11vw, 50px); }
       .hero__social { bottom: 14px; right: 16px; gap: 12px; }
@@ -145,42 +140,58 @@
     /* ── OVERLAY NAVIGATION ──────────────────────────────── */
     .nav-overlay {
       position: fixed; inset: 0; z-index: 9999;
-      background: rgba(10,11,12,.96);
+      background: rgba(22,16,10,.97);
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       opacity: 0; pointer-events: none;
       transition: opacity .4s cubic-bezier(.16,1,.3,1);
     }
     .nav-overlay.open { opacity: 1; pointer-events: all; }
-
     .nav-overlay__close {
       position: absolute; top: 20px; left: 20px;
       width: 44px; height: 40px;
-      background: rgba(8,7,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border: 1px solid rgba(240,235,224,.1); border-radius: 999px;
+      background: rgba(16,10,6,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      border: 1px solid rgba(200,185,165,.1); border-radius: 999px;
       box-shadow: 0 4px 24px rgba(0,0,0,.35);
       cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;
     }
-    .nav-overlay__close span {
-      position: absolute; display: block; width: 18px; height: 1.5px; background: var(--cream);
-    }
+    .nav-overlay__close span { position: absolute; display: block; width: 18px; height: 1.5px; background: var(--cream); }
     .nav-overlay__close span:nth-child(1) { transform: rotate(45deg); }
     .nav-overlay__close span:nth-child(2) { transform: rotate(-45deg); }
-
     .nav-overlay__links { display: flex; flex-direction: column; align-items: center; gap: 28px; width: 100%; padding: 0 20px; }
     .nav-overlay__links a {
       font-family: 'Cormorant Garamond', serif; font-weight: 300;
-      font-size: clamp(28px, 8vw, 50px);
-      letter-spacing: .05em; text-transform: uppercase;
+      font-size: clamp(28px, 8vw, 50px); letter-spacing: .05em; text-transform: uppercase;
       color: var(--cream); text-decoration: none;
       opacity: .45; transition: opacity .25s, letter-spacing .35s;
       display: block; text-align: center; width: 100%;
     }
     .nav-overlay__links a.active { opacity: .9; }
     .nav-overlay__links a:hover { opacity: 1; letter-spacing: .08em; }
+
+    /* ── BOIS SUR LES CASES ─────────────────────────────── */
+    #wood-bg { display:none; }
+    .panel {
+      background:
+        linear-gradient(rgba(10,6,2,.52), rgba(10,6,2,.52)),
+        url('images/wood-panel.jpg') center / cover;
+    }
   </style>
 </head>
 <body>
+<!-- Fond bois SVG procédural (test 1) -->
+<div id="wood-bg" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="wf" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.006 0.15" numOctaves="6" seed="42"/>
+        <feColorMatrix type="matrix" values="0.29 0 0 0 0.51  0.25 0 0 0 0.40  0.14 0 0 0 0.24  0 0 0 0 1"/>
+      </filter>
+    </defs>
+    <rect width="100%" height="100%" filter="url(#wf)"/>
+  </svg>
+</div>
+
 <section class="hero">
 
   <div class="hero__left">
@@ -189,24 +200,27 @@
 
     <nav class="nav">
       <div class="nav__burger"><span></span><span></span><span></span></div>
-      <a class="nav__logo" href="index.html">Ardoise</a>
+      <a class="nav__logo" href="index.html">Ô Ranch</a>
       <div class="nav__sep"></div>
       <ul class="nav__links">
-        <li><a href="menu.html">Menu</a></li>
+        <li><a href="menu.html">La Carte</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="reservation.html">Réserver</a></li>
       </ul>
     </nav>
 
     <div class="hero__headline">
-      <h1>Instinct</h1>
-      <h1>Culinaire</h1>
+      <h1>Braise</h1>
+      <h1>&amp; Terroir</h1>
     </div>
 
     <div class="hero__social">
-      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-      <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
-      <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://www.instagram.com/o_ranch_gp/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
     </div>
   </div>
 
@@ -214,7 +228,7 @@
     <a class="panel panel--menu" href="menu.html">
       <div class="panel__photo"></div>
       <div class="panel__overlay"></div>
-      <div class="panel__label">Menu <span class="arr">→</span></div>
+      <div class="panel__label">La Carte <span class="arr">→</span></div>
     </a>
     <a class="panel panel--resy" href="reservation.html">
       <div class="panel__photo"></div>
@@ -234,11 +248,12 @@
   <button class="nav-overlay__close" aria-label="Fermer"><span></span><span></span></button>
   <nav class="nav-overlay__links">
     <a href="index.html" class="active">Accueil</a>
-    <a href="menu.html">Menu</a>
+    <a href="menu.html">La Carte</a>
     <a href="reservation.html">Réservation</a>
     <a href="about.html">Notre Restaurant</a>
   </nav>
 </div>
+
 
 <script>
 (function(){
@@ -251,6 +266,40 @@
   document.querySelector('.nav-overlay__close').addEventListener('click', closeMenu);
   overlay.addEventListener('click', function(e){ if(e.target===overlay) closeMenu(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+})();
+</script>
+
+<script>
+/* Centre le panneau du hero sur le point focal de l'image, quel que soit l'écran */
+(function(){
+  var bg  = document.querySelector('.hero__left__bg');
+  var box = document.querySelector('.hero__left');
+  if (!bg || !box) return;
+
+  var FY = 0.33; /* le panneau est à ~33% du haut de l'image */
+  var imgRatio; /* largeur / hauteur naturelle */
+
+  function applyPosition() {
+    if (!imgRatio) return;
+    var cw = box.offsetWidth;
+    var ch = box.offsetHeight;
+    /* avec cover, l'image remplit la largeur → hauteur = cw / ratio */
+    var scaledH = cw / imgRatio;
+    if (scaledH <= ch) { bg.style.backgroundPosition = 'center center'; return; }
+    var focalPx  = FY * scaledH;           /* pixels depuis le haut de l'image */
+    var topOffset = ch / 2 - focalPx;      /* décalage pour centrer ce point */
+    var yPct = topOffset / (ch - scaledH); /* formule background-position */
+    yPct = Math.max(0, Math.min(1, yPct));
+    bg.style.backgroundPosition = 'center ' + (yPct * 100).toFixed(1) + '%';
+  }
+
+  var probe = new Image();
+  probe.onload = function(){
+    imgRatio = probe.naturalWidth / probe.naturalHeight;
+    applyPosition();
+    window.addEventListener('resize', applyPosition);
+  };
+  probe.src = 'images/un-cadre-authentique.jpg';
 })();
 </script>
 </body>
