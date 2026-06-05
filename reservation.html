@@ -263,7 +263,7 @@
 
     <div class="form-panel">
       <div class="form-title">Demande de réservation</div>
-      <div class="form-subtitle">Remplissez le formulaire ci-dessous. Nous vous confirmons par téléphone ou email dans les meilleurs délais.</div>
+      <div class="form-subtitle">Remplissez le formulaire ci-dessous. Nous vous confirmons par téléphone dans les meilleurs délais.</div>
 
       <form id="resy-form" onsubmit="submitForm(event)">
         <div aria-hidden="true" style="position:absolute;left:-9999px;"><label>Ne pas remplir<input type="text" name="hp_field" tabindex="-1" autocomplete="off" /></label></div>
@@ -271,8 +271,7 @@
           <div class="field"><label for="f-prenom">Prénom</label><input type="text" id="f-prenom" placeholder="Marie" required /></div>
           <div class="field"><label for="f-nom">Nom</label><input type="text" id="f-nom" placeholder="Dupont" required /></div>
         </div>
-        <div class="form-row">
-          <div class="field"><label for="f-email">Email</label><input type="email" id="f-email" placeholder="marie.dupont@email.fr" required /></div>
+        <div class="form-row single">
           <div class="field"><label for="f-tel">Téléphone</label><input type="tel" id="f-tel" placeholder="+590 6 00 00 00 00" required /></div>
         </div>
         <div class="form-row three">
@@ -311,19 +310,13 @@
             <label for="f-occasion">Occasion (optionnel)</label>
             <select id="f-occasion">
               <option value="">— Aucune occasion particulière —</option>
-              <option>Anniversaire</option><option>Anniversaire de mariage</option>
-              <option>Repas d'affaires</option><option>Demande en mariage</option>
-              <option>Célébration</option><option>Repas en famille</option>
+              <option>Anniversaire</option>
+              <option>Repas d'affaires</option>
+              <option>Célébration</option>
+              <option>Autre — contacter par téléphone</option>
             </select>
           </div>
         </div>
-        <div class="form-row single">
-          <div class="field">
-            <label for="f-notes">Allergies / demandes particulières</label>
-            <textarea id="f-notes" placeholder="Allergie aux crustacés, sans gluten, table en terrasse…"></textarea>
-          </div>
-        </div>
-
         <div class="avail-section">
           <button type="button" class="avail-btn" onclick="checkAvailability()">Vérifier les disponibilités</button>
           <div class="avail-result" id="avail-result">
